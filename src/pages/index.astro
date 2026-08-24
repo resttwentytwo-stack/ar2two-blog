@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<BaseLayout
+  title="首頁"
+  description="阿爾兔兔民宿部落格：高雄旅遊、寵物友善住宿與包棟民宿相關分享。"
+>
+  <h1>阿爾兔兔民宿部落格</h1>
+  <p class="intro">高雄旅遊、寵物友善住宿、包棟民宿相關的實用分享。</p>
+
+  <ul class="post-list">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+          <p class="meta">{formatDate(post.data.pubDate)}</p>
+          <p class="excerpt">{post.data.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+
+  {posts.length === 0 && <p>目前還沒有文章，敬請期待。</p>}
+
+  <style>
+    .intro {
+      color: var(--muted);
+    }
+
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0 0;
+    }
+
+    .post-list li {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .post-list a {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .post-list a:hover {
+      color: var(--accent);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0.35rem 0;
+    }
+
+    .excerpt {
+      margin: 0;
+      color: var(--text);
+    }
+  </style>
+</BaseLayout>

@@ -1,0 +1,121 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string[];
+}
+
+const { title, description, keywords = [] } = Astro.props;
+const siteName = '阿爾兔兔民宿部落格';
+const pageTitle = `${title}｜${siteName}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const officialSiteURL = 'https://artwo2.com';
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+
+    <!-- Open Graph（社群分享預覽用） -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="zh_TW" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">{siteName}</a>
+      <nav>
+        <a href="/">文章列表</a>
+        <a href={officialSiteURL}>回官網訂房</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>© {new Date().getFullYear()} 阿爾兔兔民宿．<a href={officialSiteURL}>artwo2.com</a></p>
+    </footer>
+
+    <style>
+      :root {
+        color-scheme: light;
+        --text: #2b2420;
+        --muted: #7a6f66;
+        --bg: #fdfaf6;
+        --accent: #b5651d;
+        --border: #ece3d8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.75;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid var(--border);
+        max-width: 780px;
+        margin: 0 auto;
+      }
+
+      .brand {
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .site-header nav a {
+        margin-left: 1.25rem;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      .site-header nav a:hover {
+        color: var(--accent);
+      }
+
+      main {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      .site-footer {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .site-footer a {
+        color: var(--accent);
+      }
+    </style>
+  </body>
+</html>
