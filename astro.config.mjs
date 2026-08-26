@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://blog.artwo2.com',
+  site: 'https://blog.ar2two.com',
   integrations: [sitemap()]
 });

@@ -9,7 +9,7 @@ const { title, description, keywords = [] } = Astro.props;
 const siteName = '阿爾兔兔民宿部落格';
 const pageTitle = `${title}｜${siteName}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const officialSiteURL = 'https://artwo2.com';
+const officialSiteURL = 'https://ar2two.com';
 ---
 
 <!doctype html>
@@ -46,7 +46,7 @@ const officialSiteURL = 'https://artwo2.com';
     </main>
 
     <footer class="site-footer">
-      <p>© {new Date().getFullYear()} 阿爾兔兔民宿．<a href={officialSiteURL}>artwo2.com</a></p>
+      <p>© {new Date().getFullYear()} 阿爾兔兔民宿．<a href={officialSiteURL}>ar2two.com</a></p>
     </footer>
 
     <style>

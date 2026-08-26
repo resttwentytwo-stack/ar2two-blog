@@ -1,9 +1,9 @@
 ## 專案背景
 
-這是【阿爾兔兔民宿部落格】，跟阿爾兔兔民宿的官網（WordPress，正式網域 `artwo2.com`）是**兩個完全獨立的網站**，只靠超連結互相導流，沒有資料或後台整合：
+這是【阿爾兔兔民宿部落格】，跟阿爾兔兔民宿的官網（WordPress，正式網域 `ar2two.com`，注意拼法是 a-r-2-two，不是 artwo2）是**兩個完全獨立的網站**，只靠超連結互相導流，沒有資料或後台整合：
 
-- 官網：`https://artwo2.com`（WordPress，負責訂房）
-- 部落格：預計掛在 `https://blog.artwo2.com`（本專案，Astro 靜態網站，負責 SEO 導流內容）
+- 官網：`https://ar2two.com`（WordPress，架在 SiteGround，負責訂房）
+- 部落格：`https://blog.ar2two.com`（本專案，Astro 靜態網站，架在 Vercel，負責 SEO 導流內容）
 
 部落格目的：
 1. 針對「高雄市寵物友善民宿」「高雄包棟民宿」等關鍵字寫 SEO 文章，把流量導回官網訂房頁
@@ -20,9 +20,22 @@ Ken 不寫程式，也不太熟技術名詞，溝通時請用白話、生活化�
 2. 想主打的 SEO 關鍵字
 3. 跟阿爾兔兔本身相關、需要寫進文章的實際資訊（設施、規定、周邊景點等）
 4. 有沒有現成照片可用（若有，之後手動放進 `public/` 或文章資料夾）
-5. 文章結尾要不要放導購連結／CTA（預設放「查看空房與訂房資訊」連結到 `https://artwo2.com`）
+5. 文章結尾要不要放導購連結／CTA（預設放「查看空房與訂房資訊」連結到 `https://ar2two.com`）
 
 拿到素材後，在 `src/content/blog/` 新增一個 `.md` 檔（檔名用英文 slug），frontmatter 需包含 `title`、`description`、`pubDate`、`keywords`（陣列）、`draft`（草稿先設 `true`，Ken 確認後再改 `false`），格式可參考既有的範例文章 `gaoxiong-pet-friendly-homestay-guide.md`。
+
+## Git commit 命名規則
+
+每次 commit，標題行（第一行）一律用這個格式：
+
+```
+[YYYY-MM-DD] 簡短敘述
+```
+
+- `YYYY-MM-DD`：commit 當天的日期
+- 簡短敘述：一句話講清楚這次改了什麼
+
+需要更詳細的說明時，可以在標題行下方空一行後補充（例如改了哪些檔案、為什麼要改）。
 
 ## Development
 
