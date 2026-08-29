@@ -15,6 +15,28 @@ const { Content } = await render(post);
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const pageURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  mainEntityOfPage: pageURL,
+  author: {
+    '@type': 'Organization',
+    name: '阿爾兔兔民宿',
+    url: 'https://ar2two.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: '阿爾兔兔民宿',
+    url: 'https://ar2two.com',
+  },
+};
 ---
 
 <BaseLayout
@@ -22,6 +44,7 @@ const formatDate = (date: Date) =>
   description={post.data.description}
   keywords={post.data.keywords}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <article>
     <p class="meta">{formatDate(post.data.pubDate)}</p>
     <h1>{post.data.title}</h1>

@@ -20,7 +20,10 @@ const formatDate = (date: Date) =>
     {
       posts.map((post) => (
         <li>
-          <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+          <a href={`/blog/${post.id}/`}>
+            {post.data.title}
+            <span class="cta-hint">👉 點我查看細節</span>
+          </a>
           <p class="meta">{formatDate(post.data.pubDate)}</p>
           <p class="excerpt">{post.data.description}</p>
         </li>
@@ -55,6 +58,15 @@ const formatDate = (date: Date) =>
 
     .post-list a:hover {
       color: var(--accent);
+    }
+
+    .cta-hint {
+      display: inline-block;
+      margin-left: 0.6rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
     }
 
     .meta {
