@@ -15,15 +15,23 @@
 
 - 官網：`https://ar2two.com`（WordPress，架在 **SiteGround**，負責訂房）
 - 部落格網域：`https://blog.ar2two.com`（已設定完成，見下方）
-- 專案本身的 repo 名稱 / Vercel 專案名稱仍叫 `artwo2-blog`（當初取名時筆誤，暫不影響功能，之後有空再考慮要不要重新命名）
 - CLAUDE.md 已同步修正
+
+## 2026-09-04 補上拼字修正：GitHub 倉庫、Vercel 專案、本機資料夾改名
+
+之前 GitHub 倉庫、Vercel 專案、本機資料夾都沿用一開始筆誤的 `artwo2-blog`。這次一併修正：
+
+- ✅ GitHub 倉庫已改名：`https://github.com/resttwentytwo-stack/ar2two-blog`
+- ✅ Vercel 專案已改名：`ar2two-blog`（自訂網域 `blog.ar2two.com` 不受影響，全程正常運作；Vercel 自動配發的預設網址仍是舊的 `artwo2-blog.vercel.app`，沒有自動跟著改，不影響功能，之後有空再看要不要手動更新）
+- ✅ `package.json` 內部代號同步改成 `ar2two-blog`
+- ⬜ **本機資料夾改名待 Ken 手動處理**：Claude Code 這次的工具視窗本身的工作目錄卡在 `C:\myself\artwo2-blog` 資料夾裡，Windows 不讓自己改自己正在用的資料夾名字，所以這步驟改由 Ken 直接在檔案總管，或另外開一個跟 Claude Code 無關的終端機視窗操作，把 `C:\myself\artwo2-blog` 改名成 `C:\myself\ar2two-blog`。**改名後，之後要開新的 Claude Code 對話時，要記得從新路徑 `C:\myself\ar2two-blog` 開啟**，不然 Claude Code 會找不到專案。
 
 ## 帳號資訊
 
-- 專案本機路徑：`C:\myself\artwo2-blog`
+- 專案本機路徑：`C:\myself\artwo2-blog`（**待改名成 `C:\myself\ar2two-blog`，見下方「2026-09-04」說明，Ken 尚未手動操作前路徑不變**）
 - GitHub 帳號：`resttwentytwo-stack`（注意拼字，中間是 rest-t-wentytwo，不是 restwentytwo）
-- GitHub 倉庫：`https://github.com/resttwentytwo-stack/artwo2-blog`（Public）
-- Vercel 帳號：已用同一組 GitHub 帳號登入 Vercel（Hobby / 免費方案），Vercel 專案名稱 `artwo2-blog`
+- GitHub 倉庫：`https://github.com/resttwentytwo-stack/ar2two-blog`（Public，2026-09-04 已從 `artwo2-blog` 改名）
+- Vercel 帳號：已用同一組 GitHub 帳號登入 Vercel（Hobby / 免費方案），Vercel 專案名稱 `ar2two-blog`（2026-09-04 已從 `artwo2-blog` 改名）
 - 網域註冊在 GoDaddy，但 **DNS 記錄實際由 SiteGround 管理**（GoDaddy 只是註冊商，名稱伺服器指向 SiteGround）
 - SiteGround 帳號：登入信箱 `bootaitan1@gmail.com`
 
