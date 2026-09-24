@@ -1,0 +1,12 @@
+{
+  "manual": "docs/manual.md",
+  "entries": [
+    {"type": "pair", "md": "docs/manual.md", "target": "docs/manual.html"},
+    {"type": "pair", "md": "CLAUDE.md", "target": "CLAUDE-overview.html"}
+  ],
+  "non_spec": [
+    {"pattern": "PROGRESS.md", "reason": "進度紀錄"},
+    {"pattern": "src/content/blog/**", "reason": "部落格文章，屬於產品內容"}
+  ],
+  "ignore_dirs": []
+}

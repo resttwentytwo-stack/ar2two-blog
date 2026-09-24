@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style>
+:root {
+  --bg: #f7f5f0; --card: #ffffff; --text: #2b2825; --muted: #6b645c;
+  --accent: #7a5c3e; --line: #e4ded4; --code-bg: #f1ece3; --th-bg: #efe8dc;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1a18; --card: #26231f; --text: #ece7df; --muted: #a79f94;
+    --accent: #d2ab7f; --line: #3a352f; --code-bg: #312c27; --th-bg: #332e28;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1a18; --card: #26231f; --text: #ece7df; --muted: #a79f94;
+  --accent: #d2ab7f; --line: #3a352f; --code-bg: #312c27; --th-bg: #332e28;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; line-height: 1.8; font-size: 17px; }
+main { max-width: 980px; margin: 0 auto; padding: 32px 16px 80px; }
+h1 { font-size: 1.9rem; margin: 0 0 8px; }
+.sub { color: var(--muted); margin: 0 0 24px; }
+nav { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+nav ol { margin: 0; padding-left: 1.4em; columns: 2; column-gap: 32px; }
+nav a { color: var(--accent); text-decoration: none; }
+section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 8px 24px 20px; margin-bottom: 20px; }
+h2 { font-size: 1.4rem; border-bottom: 3px solid var(--accent); padding-bottom: 6px; margin-top: 18px; }
+h3 { font-size: 1.12rem; color: var(--accent); margin-top: 24px; }
+p, li { overflow-wrap: anywhere; }
+code { background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: .88em; overflow-wrap: anywhere; }
+.tw { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--th-bg); }
+@media (max-width: 640px) { nav ol { columns: 1; } section { padding: 4px 14px 14px; } }
+</style>
+</head>
+<body>
+<main>
+<h1></h1>
+<p class="sub">本頁是 <code>C:\myself\ar2two-blog\CLAUDE.md</code> 的閱讀版，內容以該 MD 為準。</p>
+<nav><ol><li><a href="#s1">專案背景</a></li><li><a href="#s2">專案地圖</a></li><li><a href="#s3">溝通風格與排版規範</a></li><li><a href="#s4">文章怎麼寫（給未來的 Claude Code 對話參考）</a></li><li><a href="#s5">Git commit 命名規則</a></li><li><a href="#s6">開發協作守則</a></li><li><a href="#s7">踩雷紀錄</a></li><li><a href="#s8">Development</a></li><li><a href="#s9">Documentation</a></li></ol></nav>
+<section>
+<h2 id="s1">專案背景</h2>
+<p>這是【阿爾兔兔民宿部落格】，跟阿爾兔兔民宿的官網（WordPress，正式網域 <code>ar2two.com</code>，注意拼法是 a-r-2-two，不是 artwo2）是<strong>兩個完全獨立的網站</strong>，只靠超連結互相導流，沒有資料或後台整合：</p>
+<ul>
+<li>官網：<code>https://ar2two.com</code>（WordPress，架在 SiteGround，負責訂房）
+</li>
+<li>部落格：<code>https://blog.ar2two.com</code>（本專案，Astro 靜態網站，架在 Vercel，負責 SEO 導流內容）
+</li></ul>
+<p>部落格目的：</p>
+<ol>
+<li>針對「高雄市寵物友善民宿」「高雄包棟民宿」等關鍵字寫 SEO 文章，把流量導回官網訂房頁
+</li>
+<li>順便累積民宿經營內容，未來可能轉化成「民宿經營管理課程」的教材草稿
+</li>
+<li>讓 Ken（非工程師）練習用 Claude Code 維護網站
+</li></ol>
+</section>
+<section>
+<h2 id="s2">專案地圖</h2>
+<p>開始改東西前，先知道每個檔案負責什麼、放在哪：</p>
+<ul>
+<li><code>src/content/blog/*.md</code>：每篇文章一個檔案，frontmatter（標題、描述等設定）跟內文都寫在這裡。
+</li>
+<li><code>src/content.config.ts</code>：規定文章 frontmatter 要有哪些欄位（title、description、pubDate、keywords、draft）。
+</li>
+<li><code>src/layouts/BaseLayout.astro</code>：全站共用的版面框架，SEO 用的 meta 標籤設定也在這裡。
+</li>
+<li><code>src/pages/index.astro</code>：首頁，會列出所有文章。
+</li>
+<li><code>src/pages/blog/[...slug].astro</code>：單篇文章頁面的樣板，套用在每一篇文章上。
+</li>
+<li><code>public/</code>：放靜態檔案的地方，之後文章要用的圖片手動放進來。
+</li>
+<li><code>astro.config.mjs</code>：Astro 網站的整體設定。
+</li>
+<li><code>PROGRESS.md</code>：部署與帳號設定的進度記錄（GitHub、Vercel、DNS 等資訊），跟建置/上線流程有關的事查這裡。
+</li>
+<li><code>CLAUDE.md</code>：這份規則手冊本身。
+</li></ul>
+</section>
+<section>
+<h2 id="s3">溝通風格與排版規範</h2>
+<p>比照全域 <code>CLAUDE.md</code>(<code>C:\Users\w1lin\.claude\CLAUDE.md</code>)第 3 節(繁中台灣用語、禁用生硬 AI 詞彙、非工程師友好比喻、中英文數字間半形空格)。本專案補充：</p>
+<ul>
+<li>「非工程師友好」比喻優先用「日常生活或民宿營運」情境舉例。
+</li>
+<li>常見保留原文的專有名詞舉例：Astro、Vercel、SEO、WordPress。
+</li></ul>
+</section>
+<section>
+<h2 id="s4">文章怎麼寫（給未來的 Claude Code 對話參考）</h2>
+<p>文章一律由 Claude Code 撰寫初稿，Ken 只負責提供素材、確認與修改。<strong>不論是新增文章，還是修改既有文章裡的事實內容（設施、規定、地址等），都要先跟 Ken 收集或核對正確資訊，不要自己編造或憑印象修改</strong>。每次要新增文章前，先跟 Ken 收集以下資訊：</p>
+<ol>
+<li>這篇文章想吸引什麼樣的讀者／情境（例如「帶貓來高雄玩」「多人包棟聚會」）
+</li>
+<li>想主打的 SEO 關鍵字
+</li>
+<li>跟阿爾兔兔本身相關、需要寫進文章的實際資訊（設施、規定、周邊景點等）
+</li>
+<li>有沒有現成照片可用（若有，之後手動放進 <code>public/</code> 或文章資料夾）
+</li>
+<li>文章結尾要不要放導購連結／CTA（預設放「查看空房與訂房資訊」連結到 <code>https://ar2two.com</code>）
+</li></ol>
+<p>拿到素材後，在 <code>src/content/blog/</code> 新增一個 <code>.md</code> 檔（檔名用英文 slug），frontmatter 需包含 <code>title</code>、<code>description</code>、<code>pubDate</code>、<code>keywords</code>（陣列）、<code>draft</code>（草稿先設 <code>true</code>，Ken 確認後再改 <code>false</code>），格式可參考既有的範例文章 <code>gaoxiong-pet-friendly-homestay-guide.md</code>。</p>
+<h3>發文前檢查清單</h3>
+<p>把 <code>draft</code> 從 <code>true</code> 改成 <code>false</code> 正式發佈前，過一遍這份清單：</p>
+<ul>
+<li>[ ] 中文與英文／數字之間有加半形空格
+</li>
+<li>[ ] 主打的 SEO 關鍵字有自然出現在標題和文章前段
+</li>
+<li>[ ] <code>description</code> 長度適中（約 50–160 字元），讀起來通順、不是關鍵字堆砌
+</li>
+<li>[ ] 用到的圖片都補上 alt 文字（給搜尋引擎和視障讀者看的圖片說明）
+</li>
+<li>[ ] 文末有放導購 CTA 連結（或已跟 Ken 確認這篇不需要）
+</li>
+<li>[ ] frontmatter 五個欄位（<code>title</code>／<code>description</code>／<code>pubDate</code>／<code>keywords</code>／<code>draft</code>）都填齊
+</li>
+<li>[ ] 文章裡提到的民宿設施、規定等資訊已經跟 Ken 核對過，不是憑印象或猜測寫的
+</li></ul>
+</section>
+<section>
+<h2 id="s5">Git commit 命名規則</h2>
+<p>比照全域 <code>CLAUDE.md</code> 第 6 節：標題行(第一行)一律用 <code>[YYYY-MM-DD] 簡短敘述</code> 格式，需要更詳細說明時可在標題行下方空一行後補充(例如改了哪些檔案、為什麼要改)。</p>
+</section>
+<section>
+<h2 id="s6">開發協作守則</h2>
+<p>比照全域 <code>CLAUDE.md</code> 第 4 節(先出計劃確認再動、刪除覆蓋前查清楚完整範圍、不確定就主動確認不要腦補)。本專案的應用場景：</p>
+<ol>
+<li>處理批次調整文章內容、新增/修改文章結構、或建立新的頁面邏輯前，先用條列式說明「處理邏輯與預期成果」。
+</li>
+<li>批次改寫多篇文章的 frontmatter、重新產生某個資料夾前，先完整追蹤實際會動到的每一個檔案。
+</li>
+<li>Ken 提供的文字素材（口頭描述、群組訊息、筆記）可能有錯字、講到一半、前後不一致的情況，發現時要具體指出哪裡有疑慮，跟 Ken 確認清楚後再寫進文章或改動檔案。
+</li></ol>
+</section>
+<section>
+<h2 id="s7">踩雷紀錄</h2>
+<p>記錄之前發生過的具體狀況，避免重蹈覆轍。之後只要發生「以為只改一個地方，結果影響到其他地方」之類的失誤，都補一條進來（格式：日期、發生什麼事、以後要注意什麼）。</p>
+<ul>
+<li><strong>2026-08-26 官網網域名稱寫錯</strong>：一開始把官網網域誤寫成 <code>artwo2.com</code>，正確應該是 <code>ar2two.com</code>（a-r-2-two）。這兩個字長得很像，之後提到官網網址時要再三確認拼法，不要憑印象打。
+</li></ul>
+</section>
+<section>
+<h2 id="s8">Development</h2>
+<p>When starting the dev server, use background mode:</p>
+<p>```</p>
+<p>astro dev --background</p>
+<p>```</p>
+<p>Manage the background server with <code>astro dev stop</code>, <code>astro dev status</code>, and <code>astro dev logs</code>.</p>
+</section>
+<section>
+<h2 id="s9">Documentation</h2>
+<p>Full documentation: https://docs.astro.build</p>
+<p>Consult these guides before working on related tasks:</p>
+<ul>
+<li>[Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
+</li>
+<li>[Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
+</li>
+<li>[Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
+</li>
+<li>[Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
+</li>
+<li>[Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
+</li>
+<li>[Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+</li></ul>
+</section>
+</main>
+</body>
+</html>
