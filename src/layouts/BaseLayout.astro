@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description: string;
@@ -20,6 +22,14 @@ const officialSiteURL = 'https://ar2two.com';
     <meta name="google-site-verification" content="tnd6yItyVmjfJRnIs7mRBq8trSrVWMkaiMSjs_OX-Eo" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- 字型：標題思源宋體、內文思源黑體（Google 會切片，只下載頁面用到的字） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap"
+    />
 
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
@@ -51,39 +61,21 @@ const officialSiteURL = 'https://ar2two.com';
     </footer>
 
     <style>
-      :root {
-        color-scheme: light;
-        --text: #2b2420;
-        --muted: #7a6f66;
-        --bg: #fdfaf6;
-        --accent: #b5651d;
-        --border: #ece3d8;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-        color: var(--text);
-        background: var(--bg);
-        line-height: 1.75;
-      }
-
       .site-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1.25rem 1.5rem;
         border-bottom: 1px solid var(--border);
-        max-width: 780px;
+        max-width: var(--content-width);
         margin: 0 auto;
       }
 
       .brand {
+        font-family: var(--font-heading);
+        font-size: 1.15rem;
         font-weight: 700;
+        letter-spacing: 0.05em;
         color: var(--text);
         text-decoration: none;
       }
@@ -100,13 +92,13 @@ const officialSiteURL = 'https://ar2two.com';
       }
 
       main {
-        max-width: 780px;
+        max-width: var(--content-width);
         margin: 0 auto;
-        padding: 2rem 1.5rem 4rem;
+        padding: 2.5rem 1.5rem 4rem;
       }
 
       .site-footer {
-        max-width: 780px;
+        max-width: var(--content-width);
         margin: 0 auto;
         padding: 1.5rem;
         color: var(--muted);

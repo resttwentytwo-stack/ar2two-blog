@@ -6,6 +6,7 @@
   ],
   "non_spec": [
     {"pattern": "PROGRESS.md", "reason": "進度紀錄"},
+    {"pattern": "docs/redesign-progress.md", "reason": "版面裝潢任務進度紀錄"},
     {"pattern": "src/content/blog/**", "reason": "部落格文章，屬於產品內容"}
   ],
   "ignore_dirs": []

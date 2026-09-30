@@ -1,0 +1,104 @@
+/* 全站共用樣式：配色、字型、文字排版 */
+
+:root {
+  color-scheme: light;
+
+  /* 配色：延續暖棕色系 */
+  --text: #2b2420;
+  --muted: #7a6f66;
+  --bg: #fdfaf6;
+  --surface: #ffffff;
+  --accent: #b5651d;
+  --accent-dark: #8f4e14;
+  --accent-soft: #f6ebdf;
+  --border: #ece3d8;
+
+  /* 字型：標題用宋體，內文用黑體 */
+  --font-body: 'Noto Sans TC', system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --font-heading: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+
+  --content-width: 780px;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.75rem;
+}
+
+p {
+  margin: 0 0 1.25rem;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
