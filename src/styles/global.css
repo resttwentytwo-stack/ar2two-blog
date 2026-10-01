@@ -13,6 +13,10 @@
   --accent-soft: #f6ebdf;
   --border: #ece3d8;
 
+  /* 訂房按鈕 */
+  --cta: var(--accent);
+  --cta-dark: var(--accent-dark);
+
   /* 字型：標題用宋體，內文用黑體 */
   --font-body: 'Noto Sans TC', system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
   --font-heading: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;

@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 
 interface Props {
   title: string;
@@ -44,13 +45,7 @@ const officialSiteURL = 'https://ar2two.com';
     <meta property="og:locale" content="zh_TW" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="/">{siteName}</a>
-      <nav>
-        <a href="/">文章列表</a>
-        <a href={officialSiteURL}>回官網訂房</a>
-      </nav>
-    </header>
+    <Header />
 
     <main>
       <slot />
@@ -61,36 +56,6 @@ const officialSiteURL = 'https://ar2two.com';
     </footer>
 
     <style>
-      .site-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.25rem 1.5rem;
-        border-bottom: 1px solid var(--border);
-        max-width: var(--content-width);
-        margin: 0 auto;
-      }
-
-      .brand {
-        font-family: var(--font-heading);
-        font-size: 1.15rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        color: var(--text);
-        text-decoration: none;
-      }
-
-      .site-header nav a {
-        margin-left: 1.25rem;
-        color: var(--muted);
-        text-decoration: none;
-        font-size: 0.95rem;
-      }
-
-      .site-header nav a:hover {
-        color: var(--accent);
-      }
-
       main {
         max-width: var(--content-width);
         margin: 0 auto;

@@ -1,0 +1,119 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/ar2two-logo.png';
+
+const siteName = '阿爾兔兔民宿部落格';
+const officialSiteURL = 'https://ar2two.com';
+---
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="/">
+      <Image src={logo} alt="阿爾兔兔民宿 logo" width={44} height={44} loading="eager" />
+      <span>{siteName}</span>
+    </a>
+
+    <nav>
+      <a class="nav-link" href="/">文章列表</a>
+      <!-- 之後加「中文 / EN」語言切換時放這裡 -->
+      <a class="cta" href={officialSiteURL}>查看空房・訂房</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(253, 250, 246, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .brand img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .nav-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: var(--cta);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .cta:hover {
+    background: var(--cta-dark);
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .inner {
+      padding: 0.6rem 1rem;
+    }
+
+    .brand span {
+      font-size: 1rem;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+    }
+
+    .nav-link {
+      display: none;
+    }
+
+    .cta {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+    }
+  }
+</style>
