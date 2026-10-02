@@ -21,8 +21,8 @@
 | Step 2 | 導覽列升級＋訂房按鈕（預留語言切換位置） | 完成，commit `faf6c52`，2026-10-01 已推上線 |
 | Step 2.5 | 搜尋結果外觀：首頁加網站名稱資料、小圖示換成粉紅房子 logo | 完成，commit `4a47e13`，2026-10-01 已推上線 |
 | Step 3 | 頁尾升級（地址、聯絡、社群） | Ken 決定不做，頁尾維持只有版權那一行 |
-| Step 4 | 文章內頁排版＋更新日期 | 完成（日期、目錄、日期空格），等 Ken 同意後 commit；常見問題、麵包屑 Ken 同意排到之後 |
-| Step 5 | 文章封面圖＋首頁卡片式列表 | 未開始 |
+| Step 4 | 文章內頁排版＋更新日期 | 完成，commit `4c01a24`，還沒推上線；常見問題、麵包屑 Ken 同意排到之後 |
+| Step 5 | 文章封面圖＋首頁卡片式列表 | 進行中：封面三版本已交給 Google（未 commit）；內文已放外觀、室內照片（未 commit，等 Ken 看本機預覽）；首頁卡片待預覽 |
 | Step 6 | 關於我們頁面 | 未開始 |
 | Step 7 | RSS 訂閱（可選） | 未開始 |
 
@@ -52,6 +52,17 @@
 - 2026-10-01：Step 4 Ken 同意加文章目錄，從段落小標題（h2、h3）自動產生。依據 Google 官方部落格 2009 年文章（https://developers.google.com/search/blog/2009/09/using-named-anchors-to-identify ）：段落有清楚名稱加上目錄，可提高搜尋結果出現「跳到某一段」連結的機會，但由 Google 自動決定。目錄放在日期下面、第一段之前（放第一段之後要另寫處理程式，暫不做）。
 - 2026-10-02：Step 4 內文排版 Ken 看過預覽後說不用調整。日期 Ken 選加空格，文章頁與首頁列表統一寫成「2026 年 8 月 24 日」（依全域規則中文與數字之間加半形空格）。
 - 2026-10-02：Step 4 的常見問題段落、麵包屑，Ken 同意排到之後：常見問題要 Ken 提供真實問答，跟下一篇文章一起規劃；麵包屑等文章變多、有分類再加。
+
+- 2026-10-02：Step 5 不重新下載官方範本，封面圖與 RSS 直接照 Astro 官方文件做（https://docs.astro.build/en/guides/images/ 、https://docs.astro.build/en/recipes/rss/ ）。Step 6 若需要版面靈感再下載。
+
+- 2026-10-02：Step 5 封面照片 Ken 不採用房型照片，改用 `C:\myself\ar阿爾兔兔\部落客照片\` 的 3 張（外觀、狗狗在室內、狗狗在門口），複製到 `C:\myself\ar2two-blog\src\assets\photos\`，原檔未動。另產生 3 張加上「引用媽寶濟斯嘟嘟拍攝照片」的新照片（檔名加 `-credit`），字型 jf open 粉圓 v2.1（SIL OFL 1.1，https://github.com/justfont/open-huninn-font ，下載到 `C:\tmp\fonts\jf-openhuninn-2.1.ttf`，不放進專案），不加底色：外觀棕色字放在原標籤上方、左緣切齊；門口深灰字放在原標籤下方；室內白色字放右下角。Ken 確認可以。照片授權 Ken 沒有明確回答，只要求標註拍攝者。
+
+- 2026-10-02：Step 5 照片用法 Ken 選 A：門口那張（狗狗在民宿門口）當寵物友善文章的封面，外觀與室內兩張放進文章內文，放哪一段與照片說明要先擬好給 Ken 確認。
+
+- 2026-10-02：Step 5 封面比例：Ken 要以手機與 Google 官方為主，讀者主要從 Google 搜尋與 AI 搜尋進來，Facebook 分享預覽不考慮。依 Google 文章圖片說明（https://developers.google.com/search/docs/appearance/structured-data/article ）提供 1:1、4:3、16:9 三版，存成 `C:\myself\ar2two-blog\src\assets\photos\pet-friendly-cover-1x1.jpg`、`-4x3.jpg`、`-16x9.jpg`（1:1 是整張原圖；4:3 保留上方標籤；16:9 切掉上方標籤，引用文字重加在右上角）。三版只放進給 Google 看的文章資料，畫面上不顯示。另依 Google Discover 說明（https://developers.google.com/search/docs/appearance/google-discover ）在全站加上 `max-image-preview:large`。文章設定新增可不填的 `cover` 欄位（square／standard／wide／alt）。
+- 2026-10-02：照片說明（alt）依 Google 圖片說明（https://developers.google.com/search/docs/appearance/google-images ）撰寫，Ken 確認：封面「白色馬爾濟斯開心待在高雄寵物友善民宿阿爾兔兔的門口」；外觀「高雄包棟民宿阿爾兔兔的整棟外觀，藍綠色窗框搭配木門」；室內「白色馬爾濟斯在阿爾兔兔民宿的公共空間，毛小孩可以一起待在室內」。狗狗品種 Ken 確認是馬爾濟斯，名字未確認，不寫。
+
+- 2026-10-02：外觀、室內照片放進寵物友善文章「歡迎認識阿爾兔兔民宿」那一段：外觀放在介紹最前面（小字「阿爾兔兔民宿整棟外觀」），室內放在介紹清單後、房型參考前（小字「毛小孩可以一起待在公共空間」），用加了引用文字的版本。前面 1～6 點通用建議不放阿爾兔兔照片，避免像廣告。Ken 同意這個位置。
 
 ## 裝潢以外的插單
 

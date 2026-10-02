@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { getImage } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
@@ -22,6 +23,17 @@ const formatDate = (date: Date) =>
 
 const pageURL = new URL(Astro.url.pathname, Astro.site).toString();
 
+// 封面三種比例的網址，只放進給 Google 看的資料，畫面上不顯示
+const { cover } = post.data;
+const coverURLs = cover
+  ? await Promise.all(
+      [cover.square, cover.standard, cover.wide].map(async (src) => {
+        const img = await getImage({ src, format: 'jpg' });
+        return new URL(img.src, Astro.site).toString();
+      }),
+    )
+  : [];
+
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -30,6 +42,7 @@ const structuredData = {
   datePublished: post.data.pubDate.toISOString(),
   dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
   mainEntityOfPage: pageURL,
+  ...(coverURLs.length > 0 && { image: coverURLs }),
   author: {
     '@type': 'Organization',
     name: '阿爾兔兔民宿',
