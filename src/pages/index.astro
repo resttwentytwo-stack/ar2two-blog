@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CoverImage from '../components/CoverImage.astro';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -29,13 +30,20 @@ const websiteData = {
   <ul class="post-list">
     {
       posts.map((post) => (
-        <li>
-          <a href={`/blog/${post.id}/`}>
-            {post.data.title}
-            <span class="cta-hint">👉 點我查看細節</span>
-          </a>
-          <p class="meta">{formatDate(post.data.pubDate)}</p>
-          <p class="excerpt">{post.data.description}</p>
+        <li class="card">
+          {post.data.cover && (
+            <a class="card-cover" href={`/blog/${post.id}/`} tabindex="-1" aria-hidden="true">
+              <CoverImage cover={post.data.cover} sizes="(max-width: 780px) 100vw, 732px" />
+            </a>
+          )}
+          <div class="card-body">
+            <a class="card-title" href={`/blog/${post.id}/`}>
+              {post.data.title}
+              <span class="cta-hint">👉 點我查看細節</span>
+            </a>
+            <p class="meta">{formatDate(post.data.pubDate)}</p>
+            <p class="excerpt">{post.data.description}</p>
+          </div>
         </li>
       ))
     }
@@ -54,19 +62,34 @@ const websiteData = {
       margin: 2rem 0 0;
     }
 
-    .post-list li {
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--border);
+    .card {
+      margin-bottom: 1.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
     }
 
-    .post-list a {
+    .card-cover {
+      display: block;
+    }
+
+    .card-cover :global(.cover-img) {
+      border-radius: 0;
+    }
+
+    .card-body {
+      padding: 1rem 1.25rem 1.25rem;
+    }
+
+    .card-title {
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--text);
       text-decoration: none;
     }
 
-    .post-list a:hover {
+    .card-title:hover {
       color: var(--accent);
     }
 

@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import { getImage } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CoverImage from '../../components/CoverImage.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -74,6 +75,11 @@ const structuredData = {
         )
       }
     </p>
+    {cover && (
+      <div class="article-cover">
+        <CoverImage cover={cover} sizes="(max-width: 780px) 100vw, 732px" eager />
+      </div>
+    )}
     {
       tocItems.length > 1 && (
         <nav class="toc" aria-label="文章目錄">
@@ -98,6 +104,10 @@ const structuredData = {
       color: var(--muted);
       font-size: 0.85rem;
       margin: -0.5rem 0 1.5rem;
+    }
+
+    .article-cover {
+      margin: 0 0 1.75rem;
     }
 
     .toc {
