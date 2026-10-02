@@ -5,8 +5,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+// 日期寫成「2026 年 8 月 24 日」（中文與數字之間加半形空格）
 const formatDate = (date: Date) =>
-  date.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' });
+  `${date.getUTCFullYear()} 年 ${date.getUTCMonth() + 1} 月 ${date.getUTCDate()} 日`;
 
 // 告訴 Google 網站名稱（搜尋結果網址上面那一行），只放在首頁
 const websiteData = {
