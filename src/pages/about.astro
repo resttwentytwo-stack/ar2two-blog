@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// 內容來源：官網 https://ar2two.com 首頁的 Our Story 與房型介紹、寵物友善文章裡 Ken 確認過的資訊
+// 草稿：2026-10-03 擬稿，等 Ken 確認
+const officialSiteURL = 'https://ar2two.com';
+---
+
+<BaseLayout
+  title="關於我們"
+  description="阿爾兔兔民宿部落格由高雄寵物友善包棟民宿阿爾兔兔的主人撰寫，分享帶毛小孩旅行、多人包棟住宿的實用經驗。"
+>
+  <article class="about">
+    <h1>關於我們</h1>
+
+    <p class="lead">
+      這個部落格由高雄寵物友善包棟民宿 <strong>阿爾兔兔</strong> 的主人撰寫，分享帶毛小孩旅行、多人包棟住宿的實用經驗。
+    </p>
+
+    <h2>誰在寫這個部落格</h2>
+    <p>我是 Ken，阿爾兔兔民宿的主人。</p>
+    <p>每天接待帶著毛小孩、全家大小一起出遊的旅客，累積了不少實際經驗，所以把這些經驗整理成文章，希望幫你在訂房前少踩一點雷。</p>
+
+    <h2>阿爾兔兔民宿</h2>
+    <ul>
+      <li>位在高雄市新興區，是一棟 60 年代的老房子，保留原本的建築結構重新打造。</li>
+      <li>每間房間風格都不一樣，有吊椅、蛋椅、公主風、文青風和親子樓中樓房型。</li>
+      <li>高雄市區少數可以包整棟的民宿，也可以單訂房間。</li>
+      <li>全房型都可以帶寵物入住。</li>
+      <li>合法民宿，也是國民旅遊卡特約商店。</li>
+    </ul>
+
+    <h2>免費早餐</h2>
+    <p>住宿提供免費早餐，來自高雄在地 63 年的老店「老江紅茶」，直接送到民宿。</p>
+    <p>不用一早出門找早餐，帶著毛小孩的旅客也能在民宿裡從容吃完再出發。</p>
+
+    <h2>名字的由來</h2>
+    <p>「阿爾兔兔」來自英文 Rest twenty two（R22）的發音。我們想取一個好記、又容易被搜尋到的名字，就變成了現在的阿爾兔兔。</p>
+
+    <h2>交通位置</h2>
+    <p>民宿地址是高雄市新興區南台路 43 巷 1 弄 6 號。步行 4 分鐘可以到高雄捷運美麗島站和六合夜市，離中央公園也很近，方便早晚遛毛小孩。</p>
+
+    <p class="cta-line">
+      <a class="cta" href={officialSiteURL}>查看空房與訂房資訊</a>
+    </p>
+  </article>
+
+  <style>
+    .lead {
+      font-size: 1.1rem;
+    }
+
+    .about h2 {
+      margin-top: 2rem;
+    }
+
+    .cta-line {
+      margin-top: 2.5rem;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      background: var(--cta);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      background: var(--cta-dark);
+    }
+  </style>
+</BaseLayout>
