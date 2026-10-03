@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 776" width="640" height="776" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC',sans-serif">
+<rect width="640" height="776" rx="18" fill="#fffaf4"/>
+<text x="32" y="48" font-size="26" font-weight="700" fill="#2b2420">開車：中正交流道到阿爾兔兔</text>
+<text x="32" y="76" font-size="16" fill="#7a6a5e">巷弄車子開不進去，先在弄口下行李再去停車</text>
+<line x1="70" y1="136" x2="70" y2="656" stroke="#e3d3c2" stroke-width="4" stroke-dasharray="2 8" stroke-linecap="round"/>
+<rect x="20" y="96" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="110" width="52" height="52" rx="12" fill="#f6ebdf"/><circle cx="70" cy="136" r="11" fill="#b5651d"/><circle cx="70" cy="136" r="4.5" fill="#fff"/>
+<text x="116" y="124" font-size="15" font-weight="700" fill="#b5651d">起點</text>
+<text x="116" y="150" font-size="19" font-weight="700" fill="#2b2420">南下高雄，中正交流道下</text>
+<rect x="20" y="200" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="214" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M60,256 V236 H82" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M74,228 L83,236 L74,244" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="228" font-size="15" font-weight="700" fill="#b5651d">第 1 步</text>
+<text x="116" y="254" font-size="19" font-weight="700" fill="#2b2420">下交流道右轉，一路直走約 15 分鐘</text>
+<text x="116" y="278" font-size="15" fill="#7a6a5e">會經過中山一路、中正三路</text>
+<rect x="20" y="304" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="318" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M80,360 V340 H58" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M66,332 L57,340 L66,348" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="332" font-size="15" font-weight="700" fill="#b5651d">第 2 步</text>
+<text x="116" y="358" font-size="19" font-weight="700" fill="#2b2420">中正四路與自立二路交叉口左轉</text>
+<text x="116" y="382" font-size="15" fill="#7a6a5e">進入自立二路</text>
+<rect x="20" y="408" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="422" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M80,464 V444 H58" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M66,436 L57,444 L66,452" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="436" font-size="15" font-weight="700" fill="#b5651d">第 3 步</text>
+<text x="116" y="462" font-size="19" font-weight="700" fill="#2b2420">看到左邊停車場和早安美之城，馬上左轉</text>
+<text x="116" y="486" font-size="15" fill="#7a6a5e">進入南台路 43 巷</text>
+<rect x="20" y="512" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="526" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M70,568 V538" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M61,547 L70,537 L79,547" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="540" font-size="15" font-weight="700" fill="#b5651d">第 4 步</text>
+<text x="116" y="566" font-size="19" font-weight="700" fill="#2b2420">直走約 100 公尺</text>
+<text x="116" y="590" font-size="15" fill="#7a6a5e">右手邊有「南台路 43 巷 1 弄」牌子</text>
+<rect x="20" y="616" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="630" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M70,672 C56,656 56,640 70,640 C84,640 84,656 70,672 Z" fill="#b5651d"/><circle cx="70" cy="651" r="5" fill="#fff"/>
+<text x="116" y="644" font-size="15" font-weight="700" fill="#b5651d">到達</text>
+<text x="116" y="670" font-size="19" font-weight="700" fill="#2b2420">靠邊暫停，先下行李</text>
+<text x="116" y="694" font-size="15" fill="#7a6a5e">再把車開去停車場</text>
+<text x="32" y="754" font-size="13" fill="#7a6a5e">示意圖，不是實際比例，請以現場路牌為準</text></svg>

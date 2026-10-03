@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 880" width="640" height="880" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC',sans-serif">
+<rect width="640" height="880" rx="18" fill="#fffaf4"/>
+<text x="32" y="48" font-size="26" font-weight="700" fill="#2b2420">搭捷運：美麗島站走到阿爾兔兔</text>
+<text x="32" y="76" font-size="16" fill="#7a6a5e">美麗島站 2 號出口出發，步行約 4 分鐘</text>
+<line x1="70" y1="136" x2="70" y2="760" stroke="#e3d3c2" stroke-width="4" stroke-dasharray="2 8" stroke-linecap="round"/>
+<rect x="20" y="96" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="110" width="52" height="52" rx="12" fill="#f6ebdf"/><circle cx="70" cy="136" r="11" fill="#b5651d"/><circle cx="70" cy="136" r="4.5" fill="#fff"/>
+<text x="116" y="124" font-size="15" font-weight="700" fill="#b5651d">起點</text>
+<text x="116" y="150" font-size="19" font-weight="700" fill="#2b2420">美麗島站 2 號出口</text>
+<text x="116" y="174" font-size="15" fill="#7a6a5e">紅線 R10／橘線 O5</text>
+<rect x="20" y="200" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="214" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M56,256 V244 H74 V226" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M65,234 L74,225 L83,234" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="228" font-size="15" font-weight="700" fill="#b5651d">第 1 步</text>
+<text x="116" y="254" font-size="19" font-weight="700" fill="#2b2420">出口出來右轉，到轉角處左轉</text>
+<rect x="20" y="304" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="318" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M70,360 V330" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M61,339 L70,329 L79,339" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="332" font-size="15" font-weight="700" fill="#b5651d">第 2 步</text>
+<text x="116" y="358" font-size="19" font-weight="700" fill="#2b2420">直走到中正四路與南台路交叉口</text>
+<rect x="20" y="408" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="422" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M80,464 V444 H58" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M66,436 L57,444 L66,452" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="436" font-size="15" font-weight="700" fill="#b5651d">第 3 步</text>
+<text x="116" y="462" font-size="19" font-weight="700" fill="#2b2420">在交叉口左轉，進入南台路</text>
+<rect x="20" y="512" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="526" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M60,568 V548 H82" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M74,540 L83,548 L74,556" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="540" font-size="15" font-weight="700" fill="#b5651d">第 4 步</text>
+<text x="116" y="566" font-size="19" font-weight="700" fill="#2b2420">看到「加昕洗衣店」，旁邊巷子右轉</text>
+<text x="116" y="590" font-size="15" fill="#7a6a5e">這條巷子是南台路 43 巷</text>
+<rect x="20" y="616" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="630" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M80,672 V652 H58" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M66,644 L57,652 L66,660" fill="none" stroke="#b5651d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="644" font-size="15" font-weight="700" fill="#b5651d">第 5 步</text>
+<text x="116" y="670" font-size="19" font-weight="700" fill="#2b2420">看到「南台路 43 巷 1 弄」路牌，左轉</text>
+<rect x="20" y="720" width="600" height="90" rx="14" fill="#fff" stroke="#e3d3c2"/>
+<rect x="44" y="734" width="52" height="52" rx="12" fill="#f6ebdf"/><path d="M70,776 C56,760 56,744 70,744 C84,744 84,760 70,776 Z" fill="#b5651d"/><circle cx="70" cy="755" r="5" fill="#fff"/>
+<text x="116" y="748" font-size="15" font-weight="700" fill="#b5651d">到達</text>
+<text x="116" y="774" font-size="19" font-weight="700" fill="#2b2420">阿爾兔兔</text>
+<text x="116" y="798" font-size="15" fill="#7a6a5e">藍綠色窗框、木頭大門</text>
+<text x="32" y="858" font-size="13" fill="#7a6a5e">示意圖，不是實際比例，請以現場路牌為準</text></svg>

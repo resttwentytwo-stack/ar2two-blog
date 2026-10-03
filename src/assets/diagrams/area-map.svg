@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 696" width="760" height="696" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC',sans-serif">
+<rect width="760" height="696" fill="#fffaf4"/>
+<rect width="760" height="600" fill="#efe9df"/>
+<rect x="0" y="55.0" width="760" height="30" fill="#ffffff" stroke="#d9cfc2"/>
+<rect x="0" y="170.0" width="760" height="40" fill="#ffffff" stroke="#d9cfc2"/>
+<rect x="0" y="545.0" width="760" height="30" fill="#ffffff" stroke="#d9cfc2"/>
+<rect x="93.0" y="0" width="34" height="600" fill="#ffffff" stroke="#d9cfc2"/>
+<rect x="456.0" y="0" width="28" height="600" fill="#ffffff" stroke="#d9cfc2"/>
+<rect x="638.0" y="0" width="44" height="600" fill="#ffffff" stroke="#d9cfc2"/>
+<rect x="110" y="289.0" width="360" height="22" fill="#ffffff" stroke="#d9cfc2"/>
+<rect x="313.0" y="300" width="14" height="260" fill="#ffffff" stroke="#d9cfc2"/>
+<rect x="470" y="415.0" width="190" height="20" fill="#ffffff" stroke="#d9cfc2"/>
+<text x="290" y="75" font-size="15" fill="#5c5047" font-weight="400" text-anchor="middle">六合二路</text>
+<text x="565" y="75" font-size="15" fill="#5c5047" font-weight="400" text-anchor="middle">六合二路</text>
+<text x="290" y="196" font-size="17" fill="#5c5047" font-weight="700" text-anchor="middle">中正四路</text>
+<text x="565" y="196" font-size="17" fill="#5c5047" font-weight="700" text-anchor="middle">中正四路</text>
+<text x="290" y="565" font-size="15" fill="#5c5047" font-weight="400" text-anchor="middle">大同一路</text>
+<text x="565" y="565" font-size="15" fill="#5c5047" font-weight="400" text-anchor="middle">大同一路</text>
+<text x="110" y="400" font-size="16" fill="#5c5047" font-weight="700" text-anchor="middle">自</text>
+<text x="110" y="419" font-size="16" fill="#5c5047" font-weight="700" text-anchor="middle">立</text>
+<text x="110" y="438" font-size="16" fill="#5c5047" font-weight="700" text-anchor="middle">二</text>
+<text x="110" y="457" font-size="16" fill="#5c5047" font-weight="700" text-anchor="middle">路</text>
+<text x="470" y="340" font-size="15" fill="#5c5047" font-weight="700" text-anchor="middle">南</text>
+<text x="470" y="358" font-size="15" fill="#5c5047" font-weight="700" text-anchor="middle">台</text>
+<text x="470" y="376" font-size="15" fill="#5c5047" font-weight="700" text-anchor="middle">路</text>
+<text x="660" y="470" font-size="17" fill="#5c5047" font-weight="700" text-anchor="middle">中</text>
+<text x="660" y="490" font-size="17" fill="#5c5047" font-weight="700" text-anchor="middle">山</text>
+<text x="660" y="510" font-size="17" fill="#5c5047" font-weight="700" text-anchor="middle">一</text>
+<text x="660" y="530" font-size="17" fill="#5c5047" font-weight="700" text-anchor="middle">路</text>
+<text x="215" y="305" font-size="12.5" fill="#5c5047" font-weight="700" text-anchor="middle">南台路 43 巷</text>
+<text x="298" y="440" font-size="12" fill="#5c5047" font-weight="400" text-anchor="middle">4</text>
+<text x="298" y="455" font-size="12" fill="#5c5047" font-weight="400" text-anchor="middle">3</text>
+<text x="298" y="470" font-size="12" fill="#5c5047" font-weight="400" text-anchor="middle">巷</text>
+<text x="298" y="485" font-size="12" fill="#5c5047" font-weight="400" text-anchor="middle">1</text>
+<text x="298" y="500" font-size="12" fill="#5c5047" font-weight="400" text-anchor="middle">弄</text>
+<text x="380" y="52" font-size="13" fill="#9a3412" font-weight="700" text-anchor="middle">六合夜市（六合二路）</text>
+<line x1="478" y1="216" x2="478" y2="534" stroke="#16a34a" stroke-width="4" stroke-linecap="round"/>
+<path d="M471,526 L478,538 L485,526" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="492" y="480" font-size="12.5" fill="#16a34a" font-weight="700" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">單行道</text>
+<text x="492" y="497" font-size="11.5" fill="#16a34a" font-weight="400" text-anchor="start" stroke="#fff" stroke-width="4" paint-order="stroke">只能往南開</text>
+<circle cx="608" cy="240" r="13" fill="#dc2626" stroke="#fff" stroke-width="2.5"/>
+<text x="608" y="244.94" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">M</text>
+<text x="608" y="272" font-size="12.5" fill="#5c5047" font-weight="700" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">美麗島站 2 號出口</text>
+<circle cx="522" cy="240" r="13" fill="#6b7280" stroke="#fff" stroke-width="2.5"/>
+<text x="522" y="244.94" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">$</text>
+<text x="522" y="272" font-size="12.5" fill="#5c5047" font-weight="700" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">三信銀行</text>
+<circle cx="424" cy="334" r="19" fill="#6b7280" stroke="#fff" stroke-width="2.5"/>
+<text x="424" y="340.46" font-size="17" fill="#fff" font-weight="700" text-anchor="middle">洗</text>
+<text x="424" y="370" font-size="12.5" fill="#5c5047" font-weight="700" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">加昕洗衣店</text>
+<circle cx="150" cy="336" r="19" fill="#d97706" stroke="#fff" stroke-width="2.5"/>
+<text x="150" y="342.46" font-size="17" fill="#fff" font-weight="700" text-anchor="middle">早</text>
+<text x="150" y="374" font-size="12.5" fill="#5c5047" font-weight="700" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">早安美之城</text>
+<circle cx="170" cy="240" r="13" fill="#1d4ed8" stroke="#fff" stroke-width="2.5"/>
+<text x="170" y="244.94" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">P</text>
+<text x="170" y="272" font-size="12.5" fill="#5c5047" font-weight="700" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">中正自立停車場</text>
+<circle cx="507" cy="384" r="19" fill="#6b7280" stroke="#fff" stroke-width="2.5"/>
+<text x="507" y="390.46" font-size="17" fill="#fff" font-weight="700" text-anchor="middle">廟</text>
+<circle cx="585" cy="364" r="13" fill="#1d4ed8" stroke="#fff" stroke-width="2.5"/>
+<text x="585" y="368.94" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">P</text>
+<text x="585" y="398" font-size="12.5" fill="#5c5047" font-weight="700" text-anchor="middle" stroke="#fff" stroke-width="4" paint-order="stroke">嘟嘟房停車場</text>
+<path d="M608,226 L608,204 L463,204 L463,305 L323,305 L323,402 L358,402" fill="none" stroke="#c2410c" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M760,180 L103,180 L103,295 L310,295" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<path d="M-6,-6 L4,0 L-6,6" transform="translate(560 180) rotate(180)" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-6,-6 L4,0 L-6,6" transform="translate(250 180) rotate(180)" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-6,-6 L4,0 L-6,6" transform="translate(103 250) rotate(90)" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-6,-6 L4,0 L-6,6" transform="translate(170 295) rotate(0)" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="752" y="162" font-size="12.5" fill="#2563eb" font-weight="700" text-anchor="end" stroke="#fff" stroke-width="4" paint-order="stroke">← 從中正交流道</text>
+<text x="306" y="284" font-size="12.5" fill="#2563eb" font-weight="700" text-anchor="end" stroke="#fff" stroke-width="4" paint-order="stroke">弄口下行李</text>
+<path d="M376,418 C354,392 354,366 376,366 C398,366 398,392 376,418 Z" fill="#c2410c" stroke="#fff" stroke-width="3"/>
+<circle cx="376" cy="386" r="8" fill="#fff"/>
+<rect x="328" y="424" width="96" height="26" rx="13" fill="#fff" stroke="#c2410c" stroke-width="2"/>
+<text x="376" y="442" font-size="14" fill="#c2410c" font-weight="700" text-anchor="middle">阿爾兔兔</text>
+<text x="748" y="24" font-size="13" fill="#5c5047" font-weight="700" text-anchor="end">↑ 北</text>
+<line x1="24" y1="628" x2="64" y2="628" stroke="#c2410c" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/>
+<text x="74" y="633" font-size="13" fill="#5c5047" font-weight="400" text-anchor="start">走路：美麗島站 2 號出口到民宿，約 4 分鐘</text>
+<line x1="24" y1="654" x2="64" y2="654" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+<text x="74" y="659" font-size="13" fill="#5c5047" font-weight="400" text-anchor="start">開車：開到 43 巷 1 弄弄口下行李，再去停車場</text>
+<line x1="24" y1="680" x2="64" y2="680" stroke="#16a34a" stroke-width="4" stroke-linecap="round"/>
+<text x="74" y="685" font-size="13" fill="#5c5047" font-weight="400" text-anchor="start">單行道：南台路只能往南開</text>
+<text x="746" y="685" font-size="11.5" fill="#8a7d72" font-weight="400" text-anchor="end">示意圖，非實際比例</text>
+</svg>
