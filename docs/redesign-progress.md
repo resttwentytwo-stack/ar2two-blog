@@ -93,10 +93,10 @@
 
 - 2026-10-01：寵物友善文章補上幔幔、闔家兩個房型的照片（從 `C:\myself\ar2two-blog\public\images\rooms\` 複製到 `C:\myself\ar2two-blog\src\assets\rooms\` 並縮到 1600px 寬，原始檔未動）。房型名稱依官網房型介紹頁（https://ar2two.com/ar2two-room-introduction/）逐字對應、拿掉樓層標註：旅程 吊椅2人房、幔幔 公主2人房、闔家 親子樓中樓3人房、悠然 蛋椅鄉村4人房、趣味 親子樓中樓4人房、雀屏 文青4人房（官網該頁沒有雀屏，名稱由 Ken 提供）。照片說明與 alt 文字已更新，照片檔名不動，順序依人數由少到多。已 commit `5a299f9`，2026-10-01 已推上線。這個異動跟版面裝潢分開 commit。
 
-## 下次從這裡接（2026-10-03 暫停時的狀態）
+## 下次從這裡接（2026-10-03 收工時的狀態）
 
-1. 版面裝潢 Step 0～6 都已完成並推上線（Step 3 Ken 決定不做；Step 7 RSS 建議先不做）。最後推上線的 commit 是 `7a54ca8`。
-2. 目前在寫旅客文章「包棟資訊、房型」：
+1. 版面裝潢 Step 0～6 都已完成並推上線（Step 3 Ken 決定不做；Step 7 RSS 建議先不做）。
+2. 包棟文章已完成並上線（下面是過程紀錄）。最後推上線的 commit 是 `27e41bb`。文章目錄只列大標題加編號、表格樣式，都在 `C:\myself\ar2two-blog\src\pages\blog\[...slug].astro`。
    - 包棟方案 8 項事實 Ken 已確認，見本檔決策紀錄「準備包棟文章素材」那一條。
    - 關鍵字已用 SEO 工具包查過，報告在 `C:\myself\seo-toolkit\reports\2026-10-03-ar2two-blog-baodong-kd.json`。建議主打「高雄包棟民宿10人」：官網包棟頁 https://ar2two.com/building-price/ 已經在搶「高雄包棟民宿」，部落格改搶人數長尾字，再導回官網。
    - 大綱已擬好：`C:\myself\ar2two-blog\docs\baodong-article-outline.md`。寫法照 Github_tools_check 專案裡的「民宿 SEO 寫作」skill（minsu-seo-writing），這個 skill 不會在部落格專案自動載入，要直接去讀。
@@ -105,14 +105,14 @@
    - 新增照片，都放在 `C:\myself\ar2two-blog\src\assets\photos\`：兩張大廳照，加上從「大廳外向內」裁出的封面 `baodong-cover-1x1.jpg`、`baodong-cover-4x3.jpg`、`baodong-cover-16x9.jpg`。
    - 2026-10-03 Ken 看過草稿說 OK，已改 `draft: false`，發文前檢查清單跑過、建置成功（共 4 頁）。房型名稱照官網寫法不加空格（例如「吊椅2人房」），跟寵物友善文章一致。
    - 2026-10-03 已 commit `d470f8f` 並推上線，https://blog.ar2two.com/blog/gaoxiong-whole-house-homestay-10-people/ 確認可以打開，首頁也列出這篇。配對清單已登記 `docs/*-outline.md`。
-   - 包棟文章完成。2026-10-03 Ken 已在 Google Search Console 對這篇、首頁、關於我們頁都完成要求建立索引。Sitemap（`sitemap-index.xml`）2026-09-11 已提交、狀態成功，不用重交。之後可做：官網包棟頁「包棟前一天才擺長桌」、步行時間的寫法要更新（另一個專案）。
-   - MD 同步檢查：大綱檔還沒登記分類，等 Ken 用 `[允許改檔]` 同意在配對清單的「不是說明書」名單加 `docs/*-outline.md`。
-3. Ken 2026-10-03 的指示：照 Claude 的建議直接執行，不用逐項詢問，除非 Ken 喊停。commit 和推上線一樣要 Ken 的訊息帶 `[allow-pii]`，合併成一次問。回覆一律用繁體中文。
-4. 其他還沒處理的事：
-   - 民宿資料卡 `C:\myself\seo-toolkit\tools\profiles\ar2two-profile.md` 已在 2026-10-03 更新（Ken 同意在本對話改）：步行 4 分鐘、中小型犬、老店 63 年、包棟方案與規定、訂房平台寵物費等 13 項，拿掉對應的 ⚠ 與檢查規則。早餐送達時間也已確認（最早 07:30、最晚 10:00，依當天客人的時間統籌出一個時間一次送到）。同房多隻寵物費用（2 隻 300、3 隻 500、4 隻 1000）也已確認。訂金範例也已確認（房價以房型頁為準，吊椅 2 人房平日 1880；訂金直接寫房費的 50%，不舉金額）。資料卡已沒有 ⚠ 項目。SEO 工具包的 commit 要另外問 Ken；那邊另有 `C:\myself\seo-toolkit\tools\ai_visibility.py`、`C:\myself\seo-toolkit\tools\kd_dr.py` 不是本任務改的，不要打包。
-   - 官網 https://ar2two.com 的網站名稱設定、早餐「58 年」舊資料（另一個專案）要不要調整。
+   - 2026-10-03 Ken 已在 Google Search Console 對這篇、首頁、關於我們頁都完成要求建立索引。Sitemap（`sitemap-index.xml`）2026-09-11 已提交、狀態成功，不用重交。
+   - 配對清單已登記 `docs/*-outline.md` 為不是說明書。
+3. 民宿資料卡 `C:\myself\seo-toolkit\tools\profiles\ar2two-profile.md` 已更新到沒有 ⚠ 項目（步行 4 分鐘、中小型犬、老店 63 年、包棟方案與規定、寵物費、早餐送達時間、訂金寫法等），SEO 工具包已 commit `be3b486`（沒有遠端，不用推）。那邊的 `C:\myself\seo-toolkit\tools\ai_visibility.py`、`C:\myself\seo-toolkit\tools\kd_dr.py` 不是本任務改的，維持未 commit。
+4. Ken 2026-10-03 的指示：照 Claude 的建議直接執行，不用逐項詢問，除非 Ken 喊停；但改完網站要先給 Ken 本機預覽網址，Ken 看過才問 commit。commit 和推上線要 Ken 的新訊息帶 `[allow-pii]`。回覆一律用繁體中文。
+5. 部落格接下來可以做的事：
+   - 決定下一篇旅客文章的主題。
    - 經營者部落格之後另開，網址與名稱屆時再討論。
-   - 2026-10-02 MD 同步檢查擋過 `C:\myself\AI-agent_Ken\docs\diagrams\docs03-housekeeping-overview.html` 沒有同步，那是 ai-agent-ken session 的工作，不在本專案處理。
+6. 2026-10-02 MD 同步檢查擋過 `C:\myself\AI-agent_Ken\docs\diagrams\docs03-housekeeping-overview.html` 沒有同步，那是 ai-agent-ken session 的工作，不在本專案處理。
 
 ## 待處理／注意事項
 
