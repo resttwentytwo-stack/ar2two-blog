@@ -95,6 +95,14 @@
 | 10 | Playwright（無頭瀏覽器截圖） | 把 SVG、網頁畫成圖片，Claude 自己先看效果 | 每次改圖都截圖檢查文字有沒有重疊、看不清楚 | 本機，免費 | 修掉直排路名、路名被路線蓋住、圖例壓到路的問題 |
 
 | 11 | `writing_check`（寫完自動檢查）`C:myselfseo-toolkit	oolswriting_check.py` | 檢查數字是否都在民宿資料卡、黑名單詞、標題與說明有沒有關鍵字、長度 | 把文章拆成一段一段寫進 CSV 再跑 | 本機，免費 | 錯誤 1 個（標題寫「美麗島住宿」沒空格，關鍵字是「美麗島 住宿」）、標題太長已縮短 |
+| 12 | `geo_fanout`（AI 搜尋延伸問題）ZensInk | 用樣板產生 AI 搜尋可能延伸問的子問題，並用 Google 搜尋框驗證 | `"美麗島 住宿" --lang zh` | Google 搜尋框，免費 | **不適用中文**：加了 `--lang zh` 仍是英文樣板（free alternative、roi…），寫文章不要用 |
+| 13 | `fetch_page` ＋ `parse_html`（claude-seo） | 抓競爭文章原始碼，列出 H1、H2、H3 小標題結構，當擬大綱參考 | 抓「美麗島 住宿」第 2 名 kuolife、第 4 名 mimigo 兩篇 | 直接連網，免費 | kuolife 有「住宿地圖」段落，mimigo 有「交通指南」「常見問題」，證實地圖、交通、常見問題這幾段方向正確 |
+| 14 | `onpage_audit`、`site_audit`（ZensInk，檢查建置好的網站 `C:\myself\ar2two-blog\dist\`） | 逐頁品質分數；全站壞連結、正規網址、說明文字 | `onpage_audit --dist dist --keywords 關鍵字檔`；`site_audit --dist dist --sitemap dist\sitemap-0.xml`（不給 sitemap 會找不到） | 本機，免費 | site_audit：壞連結 0、canonical 正常，首頁被判「孤兒頁」是誤報；onpage_audit：字數標準照英文（說明建議 120～160 字）不適合中文，「內部連結太少」可參考 |
+| 15 | `keyword_cluster`（ZensInk） | 依字面相似度把關鍵字分組 | 13 個字（美麗島、包棟、寵物、演唱會、火車站） | 本機，免費 | 分成 6 組大致合理；但把「六合夜市 住宿」跟美麗島分開，而前 10 名其實重疊。只能初步分組，最後以前 10 名是否重疊為準 |
+| 16 | `search_intent`（ZensInk） | 依關鍵字字面判斷搜尋目的 | 同上 13 個字 | 本機，免費 | **不適用中文**：13 個全判成「找資料」，連「推薦」也一樣，改用 `serp_intent` |
+| 17 | `gsc_kgr`（Ken 自製） | 結合官網 Search Console 曝光與平均排名，排出 P0～P3 機會分數，並列出目標清單每個字的曝光 | `--top 30 --exclude 阿爾兔兔,阿爾,ar2two,rabbit --targets tools\targets\ar2two.csv` | Search Console（官網），免費 | 寵物類曝光最多（高雄寵物友善住宿每週 20 次、平均第 10.6 名），P2 有 4 個；適合用在「選主題」 |
+| 18 | `competitor_gap`（ZensInk） | 讀競爭網站的網站地圖，列出它寫過哪些主題 | `--url https://papoa-stay.com/sitemap_index.xml`（同等規模民宿） | 直接連網，免費 | 對方寫了 33 篇：夜市旁住宿、2～3 天行程、早餐、約會、各站周邊；適合用在「選主題」 |
+| 19 | `rank_tracker`（ZensInk） | 記錄關鍵字排名，資料存在 `C:\Users\w1lin\.zens_ink\ranks.db` | `add "美麗島 住宿,高雄包棟民宿10人" --domain blog.ar2two.com --tag blog`、`check --gl tw --hl zh-TW` | Serper，每個追蹤中的字扣 1 次（這次 3 次） | 部落格兩篇還不在前 20 名（剛上線、還沒收錄，正常）；之前追蹤的「高雄寵物友善住宿」也顯示不在前 20，但 Search Console 平均第 10.6 名，兩邊對不上，原因待查 |
 
 判斷方式：把「好不好搶（kd_dr）」「有沒有人搜（搜尋框建議、Search Console）」「該寫成什麼形式（serp_intent）」放在一起看，才決定主要關鍵字。只看難度會漏掉「有沒有人搜」。
 

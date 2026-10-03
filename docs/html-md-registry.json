@@ -2,13 +2,15 @@
   "manual": "docs/manual.md",
   "entries": [
     {"type": "pair", "md": "docs/manual.md", "target": "docs/manual.html"},
-    {"type": "pair", "md": "CLAUDE.md", "target": "CLAUDE-overview.html"}
+    {"type": "pair", "md": "CLAUDE.md", "target": "CLAUDE-overview.html"},
+    {"type": "pair", "md": "docs/blog-site-profile.md", "target": "docs/blog-site-profile.html"}
   ],
   "non_spec": [
     {"pattern": "PROGRESS.md", "reason": "進度紀錄"},
     {"pattern": "docs/redesign-progress.md", "reason": "版面裝潢任務進度紀錄"},
     {"pattern": "src/content/blog/**", "reason": "部落格文章，屬於產品內容"},
-    {"pattern": "docs/*-outline.md", "reason": "文章大綱，寫作過程的工作稿"}
+    {"pattern": "docs/*-outline.md", "reason": "文章大綱，寫作過程的工作稿"},
+    {"pattern": "docs/*-progress.md", "reason": "任務進度檔"}
   ],
   "ignore_dirs": []
 }

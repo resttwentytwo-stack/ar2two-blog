@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>網站設定檔：阿爾兔兔民宿部落格</title>
+<style>
+:root {
+  --bg: #f7f5f0; --card: #ffffff; --text: #2b2825; --muted: #6b645c;
+  --accent: #7a5c3e; --line: #e4ded4; --code-bg: #f1ece3; --th-bg: #efe8dc;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1a18; --card: #26231f; --text: #ece7df; --muted: #a79f94;
+    --accent: #d2ab7f; --line: #3a352f; --code-bg: #312c27; --th-bg: #332e28;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1a18; --card: #26231f; --text: #ece7df; --muted: #a79f94;
+  --accent: #d2ab7f; --line: #3a352f; --code-bg: #312c27; --th-bg: #332e28;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; line-height: 1.8; font-size: 17px; }
+main { max-width: 980px; margin: 0 auto; padding: 32px 16px 80px; }
+h1 { font-size: 1.9rem; margin: 0 0 8px; }
+.sub { color: var(--muted); margin: 0 0 24px; }
+nav { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+nav ol { margin: 0; padding-left: 1.4em; columns: 2; column-gap: 32px; }
+nav a { color: var(--accent); text-decoration: none; }
+section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 8px 24px 20px; margin-bottom: 20px; }
+h2 { font-size: 1.4rem; border-bottom: 3px solid var(--accent); padding-bottom: 6px; margin-top: 18px; }
+h3 { font-size: 1.12rem; color: var(--accent); margin-top: 24px; }
+p, li { overflow-wrap: anywhere; }
+code { background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: .88em; overflow-wrap: anywhere; }
+.tw { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--th-bg); }
+@media (max-width: 640px) { nav ol { columns: 1; } section { padding: 4px 14px 14px; } }
+</style>
+</head>
+<body>
+<main>
+<h1>網站設定檔：阿爾兔兔民宿部落格</h1>
+<p class="sub">本頁是 <code>C:\myself\ar2two-blog\docs\blog-site-profile.md</code> 的閱讀版，內容以該 MD 為準。</p>
+<nav><ol><li><a href="#s1">網站</a></li><li><a href="#s2">事實來源</a></li><li><a href="#s3">關鍵字</a></li><li><a href="#s4">額外寫作規則</a></li><li><a href="#s5">文章</a></li><li><a href="#s6">發文前檢查清單</a></li><li><a href="#s7">commit 與上線</a></li><li><a href="#s8">進度檔</a></li></ol></nav>
+<ul>
+<li>本檔位置：<code>C:\myself\ar2two-blog\docs\blog-site-profile.md</code>
+</li>
+<li>用途：「寫部落格文章」skill 第 0 步要讀的網站資料。skill 本身只寫通用流程，這個網站專屬的資料都寫在這裡。
+</li>
+<li>skill 位置：<code>C:\Users\w1lin\.claude\skills\blog-article\SKILL.md</code>（全域，2026-10-04 安裝；備份在 <code>C:\myself\claude-global-config\skills\blog-article\</code>）
+</li></ul>
+<section>
+<h2 id="s1">網站</h2>
+<div class="tw"><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td>網址</td><td>https://blog.ar2two.com</td></tr><tr><td>技術</td><td>Astro 靜態網站，架在 Vercel，推上 GitHub 後自動上線</td></tr><tr><td>跟官網的關係</td><td>官網 https://ar2two.com 是另一個網站（WordPress），負責訂房。部落格只負責 SEO 導流，不改官網</td></tr><tr><td>本機預覽</td><td><code>astro dev --background</code>，網址 <code>http://localhost:4321/</code></td></tr><tr><td>建置</td><td><code>npx astro build</code>，產出在 <code>C:\myself\ar2two-blog\dist\</code></td></tr><tr><td><code>kd_dr</code> 用的網域</td><td><code>blog.ar2two.com</code></td></tr><tr><td><code>ai_visibility</code> 用的網站代號</td><td><code>ar2two</code>（部落格是官網的子網域，引用部落格也算「有引用」）</td></tr></tbody></table></div>
+</section>
+<section>
+<h2 id="s2">事實來源</h2>
+<ul>
+<li>民宿資料卡：<code>C:\myself\seo-toolkit\tools\profiles\ar2two-profile.md</code>。寫進文章的價格、規定、距離、時間只能從這裡拿，或 Ken 在對話中親口確認。
+</li>
+<li>已下載的官網文字：<code>C:\tmp\seo-lab\ar2two\site-text\</code>（2026-09-27 下載，可能過時）。
+</li>
+<li>本機照片：<code>C:\myself\ar阿爾兔兔\</code>（大廳、房型、路徑照片等）。
+</li>
+<li>官網本身有寫錯的地方（例如曾把每人 900 元寫成 700 元），只能當素材，寫進文章前要 Ken 確認。
+</li></ul>
+</section>
+<section>
+<h2 id="s3">關鍵字</h2>
+<ul>
+<li>目標關鍵字清單：<code>C:\myself\seo-toolkit\tools\targets\ar2two.csv</code>
+</li>
+<li><code>gsc_kgr</code> 要排除的品牌字：<code>阿爾兔兔,阿爾,ar2two,rabbit</code>
+</li>
+<li>官網已經在搶的大字（部落格不要搶同一個字當主要關鍵字）：例如「高雄包棟民宿」由官網包棟頁 https://ar2two.com/building-price/ 負責。
+</li></ul>
+</section>
+<section>
+<h2 id="s4">額外寫作規則</h2>
+<ul>
+<li>套用民宿 SEO 寫作 skill：<code>C:\myself\Github_tools_check\.claude\skills\minsu-seo-writing\SKILL.md</code>（這個 skill 不會在部落格專案自動載入，要直接去讀）。
+<ul>
+<li>大綱格式：同資料夾 <code>references\content-brief.md</code>
+</li>
+<li>標題與說明：<code>references\title-description-rules.md</code>
+</li>
+<li>圖片：<code>references\images.md</code>
+</li>
+<li>黑名單詞與七道檢查：<code>references\review-checklist.md</code>
+</li></ul>
+</li>
+<li>房型名稱照官網寫法，不加空格（例如「吊椅2人房」）。
+</li>
+<li>「非工程師友好」的比喻優先用民宿營運情境。
+</li></ul>
+</section>
+<section>
+<h2 id="s5">文章</h2>
+<div class="tw"><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td>文章資料夾</td><td><code>C:\myself\ar2two-blog\src\content\blog\</code>，一篇一個 <code>.md</code>，檔名用英文網址代號（例如 <code>gaoxiong-meilidao-station-stay.md</code>）</td></tr><tr><td>欄位</td><td><code>title</code>、<code>description</code>、<code>pubDate</code>、<code>updatedDate</code>（選填）、<code>keywords</code>（陣列）、<code>draft</code>、<code>cover</code>（<code>square</code>／<code>standard</code>／<code>wide</code>／<code>alt</code>），規定在 <code>C:\myself\ar2two-blog\src\content.config.ts</code></td></tr><tr><td>草稿</td><td>新文章先設 <code>draft: true</code>；草稿在本機預覽也看不到，要預覽時暫時改 <code>false</code></td></tr><tr><td>封面</td><td>三種比例放在 <code>C:\myself\ar2two-blog\src\assets\photos\</code>，檔名「主題-cover-1x1.jpg」「-4x3」「-16x9」</td></tr><tr><td>內文照片</td><td><code>C:\myself\ar2two-blog\src\assets\</code> 底下依類別分資料夾（<code>photos</code>、<code>rooms</code>、<code>route</code>）</td></tr><tr><td>示意圖</td><td><code>C:\myself\ar2two-blog\src\assets\diagrams\</code>，畫圖程式放 <code>C:\myself\ar2two-blog\scripts\</code></td></tr><tr><td>大綱</td><td><code>C:\myself\ar2two-blog\docs\主題-article-outline.md</code></td></tr><tr><td>結尾連結</td><td>「查看空房與訂房資訊」→ https://ar2two.com ；包棟主題另加「查看包棟方案」→ https://ar2two.com/building-price/</td></tr><tr><td>常用站內連結</td><td>房型介紹 https://ar2two.com/ar2two-room-introduction/ 、寵物規範 https://ar2two.com/pet-rule/ 、停車資訊 https://ar2two.com/ar2two-parking/ 、早餐 https://ar2two.com/ar2twobreakfast/</td></tr></tbody></table></div>
+</section>
+<section>
+<h2 id="s6">發文前檢查清單</h2>
+<p>以 <code>C:\myself\ar2two-blog\CLAUDE.md</code> 的「發文前檢查清單」為準。</p>
+</section>
+<section>
+<h2 id="s7">commit 與上線</h2>
+<ul>
+<li>commit 標題：<code>[YYYY-MM-DD] 簡短敘述</code>，結尾加共同作者標記。
+</li>
+<li>共同作者標記有 email，會被 sensitive-canary 擋下，要 Ken 送新訊息帶 <code>[allow-pii]</code>。
+</li>
+<li>不放進 commit 的檔案：<code>C:\myself\ar2two-blog\CLAUDE.md</code>、<code>C:\myself\ar2two-blog\public\images\</code>（2026-10-01 開工前就有的修改，不屬於部落格任務）。
+</li>
+<li>推上 GitHub 後 Vercel 自動上線，大約 1～2 分鐘。
+</li></ul>
+</section>
+<section>
+<h2 id="s8">進度檔</h2>
+<ul>
+<li>部落格進度：<code>C:\myself\ar2two-blog\docs\redesign-progress.md</code>（「下次從這裡接」）
+</li>
+<li>skill 建立進度：<code>C:\myself\ar2two-blog\docs\2026-10-04-blog-article-skill-progress.md</code>
+</li></ul>
+</section>
+</main>
+</body>
+</html>

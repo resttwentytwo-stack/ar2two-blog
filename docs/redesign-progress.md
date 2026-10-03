@@ -112,6 +112,8 @@
 5. 部落格接下來可以做的事：
    - 旅客文章「美麗島 住宿」（2026-10-03）：文章 `C:\myself\ar2two-blog\src\content\blog\gaoxiong-meilidao-station-stay.md`，大綱與「工具使用紀錄」在 `C:\myself\ar2two-blog\docs\meilidao-article-outline.md`。素材都已確認，Ken 看過本機預覽說 OK，發文前檢查清單與 `writing_check` 全部通過（錯誤 0、提醒 0）。封面用民宿外觀照；區域地圖、走路與開車步驟圖在 `C:\myself\ar2two-blog\src\assets\diagrams\`，地圖程式 `C:\myself\ar2two-blog\scripts\draw_area_map.py`；路線照片是官網交通頁 1～5 張（第 6 張有 Ken 電話，不用）。
    - 包棟文章每人 700 元已更正為 900 元（Ken 2026-10-03 確認）。
+   - 之後要寫的文章（Ken 2026-10-04 指定，暫時先不做）：類似「【2026高雄民宿推薦】10間必住高雄民宿懶人包」的推薦清單文。動筆前要先跟 Ken 討論：清單裡要不要放其他民宿、事實怎麼查證；「必住」在民宿 SEO 寫作 skill 的黑名單詞裡，標題用字要另外討論。
+   - 「寫部落格文章」skill 的架構（Ken 2026-10-04 同意）：一個**全域通用** skill（`C:\Users\w1lin\.claude\skills\blog-article\`，寫 0～10 步驟、工具用法、Google 規範、踩雷紀錄，不寫死任何網站資料）＋每個部落格專案一份**網站設定檔**（例如 `C:\myself\ar2two-blog\docs\blog-site-profile.md`，寫事實來源、關鍵字清單、文章資料夾、結尾連結、要不要套用民宿 SEO 寫作 skill）。skill 第 0 步固定讀目前專案的網站設定檔，不需要另外寫「民宿版」skill。工具盤點與實測結果記在 `C:\myself\ar2two-blog\docs\meilidao-article-outline.md` 的「工具使用紀錄」（19 列）。第 10 步的 Search Console 由 Ken 手動做，不用 claude-in-chrome；`ai_visibility` 要放進流程（Ken：很重要，一定要查）。
    - 這篇完成後（Ken 指定最後再做）：把 SEO 工具包所有工具、民宿 SEO 寫作 skill、其他可用來做文章的工具全部整理一次，做成一份「寫部落格文章」的 skill，以後寫文章照它走。
    - 經營者部落格之後另開，網址與名稱屆時再討論。
 6. 2026-10-02 MD 同步檢查擋過 `C:\myself\AI-agent_Ken\docs\diagrams\docs03-housekeeping-overview.html` 沒有同步，那是 ai-agent-ken session 的工作，不在本專案處理。
