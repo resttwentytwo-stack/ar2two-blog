@@ -15,8 +15,10 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
 
-// 文章目錄：列出段落小標題（h2、h3），點了跳到該段
-const tocItems = headings.filter((h) => h.depth === 2 || h.depth === 3);
+// 文章目錄：只列大標題（h2），點了跳到該段。標題自己帶的「1.」先拿掉，統一用目錄的編號
+const tocItems = headings
+  .filter((h) => h.depth === 2)
+  .map((h) => ({ ...h, text: h.text.replace(/^\d+[.、]\s*/, '') }));
 
 // 日期寫成「2026 年 8 月 24 日」（中文與數字之間加半形空格）
 const formatDate = (date: Date) =>
@@ -86,7 +88,7 @@ const structuredData = {
           <p class="toc-title">文章目錄</p>
           <ol>
             {tocItems.map((h) => (
-              <li class={`depth-${h.depth}`}>
+              <li>
                 <a href={`#${h.slug}`}>{h.text}</a>
               </li>
             ))}
@@ -119,7 +121,7 @@ const structuredData = {
     }
 
     .toc-title {
-      margin: 0 0 0.4rem;
+      margin: 0 0 0.6rem;
       font-weight: 700;
     }
 
@@ -127,14 +129,36 @@ const structuredData = {
       list-style: none;
       margin: 0;
       padding: 0;
+      counter-reset: toc;
     }
 
     .toc li {
-      padding: 0.15rem 0;
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      padding: 0.3rem 0;
+      line-height: 1.5;
     }
 
-    .toc li.depth-3 {
-      padding-left: 1.25rem;
+    .toc li + li {
+      border-top: 1px dashed color-mix(in srgb, var(--muted) 30%, transparent);
+    }
+
+    /* 圓形編號徽章 */
+    .toc li::before {
+      content: counter(toc);
+      flex: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-align: center;
+      transform: translateY(0.1rem);
     }
 
     .toc a {
@@ -159,6 +183,54 @@ const structuredData = {
 
     .content :global(a) {
       color: var(--accent);
+    }
+
+    /* 表格：加框線、表頭底色、隔行底色 */
+    .content :global(table) {
+      width: 100%;
+      margin: 1.5rem 0;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .content :global(th),
+    .content :global(td) {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .content :global(th) {
+      background: var(--accent-soft);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .content :global(tbody tr:nth-child(even)) {
+      background: color-mix(in srgb, var(--accent-soft) 40%, transparent);
+    }
+
+    /* 價格不要從中間斷行 */
+    .content :global(td strong) {
+      color: var(--accent-dark);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      /* 手機：格子內不自動換行；真的太寬時，表格自己左右滑動，不會撐破整頁 */
+      .content :global(table) {
+        display: block;
+        overflow-x: auto;
+        font-size: 0.8rem;
+      }
+
+      .content :global(th),
+      .content :global(td) {
+        padding: 0.45rem 0.4rem;
+        white-space: nowrap;
+      }
     }
 
     .content :global(img) {
