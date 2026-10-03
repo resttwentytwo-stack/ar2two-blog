@@ -88,6 +88,7 @@
   2. 包棟時每位入住旅客都有免費早餐：基本床位 19 人就是 19 份，加 3 床就是 22 份。加床每床酌收 500 元（Ken 沒有說是不是每晚計，文章照原話寫「每床 500 元」）。
   3. 晚上 10 點後關大廳窗戶、不在巷弄吵鬧的規定沒有變。
   4. 交叉比對官網後 Ken 確認：狗狗只接受中小型犬；包棟規定另有「退房前把大廳垃圾整理好放在垃圾桶旁，關掉冷氣和電燈」；大廳現在固定擺長桌和馬卡龍椅，不是只有包棟前一天才擺（官網包棟頁之後會更新）；選 3 間房的方案（每人 700 元，只限 3 月和 11 月），另外 3 間不會再租給其他客人。4 間房方案剩下的 2 間也不會租給其他客人（Ken 確認），所以文章寫成「不管選哪一種包棟方案，整棟都只住你們這一團」。
+  5. 上線後 Ken 補充（2026-10-03）：訂房平台訂房，寵物每隻每天收 500 元；官網或官方 LINE 直接訂包棟，每間房一隻寵物免費（6 間房 6 隻）；包棟取消規定照官網包棟頁。文章已改「帶毛小孩一起包棟」段落和兩題常見問題。
 
 - 2026-10-01：寵物友善文章補上幔幔、闔家兩個房型的照片（從 `C:\myself\ar2two-blog\public\images\rooms\` 複製到 `C:\myself\ar2two-blog\src\assets\rooms\` 並縮到 1600px 寬，原始檔未動）。房型名稱依官網房型介紹頁（https://ar2two.com/ar2two-room-introduction/）逐字對應、拿掉樓層標註：旅程 吊椅2人房、幔幔 公主2人房、闔家 親子樓中樓3人房、悠然 蛋椅鄉村4人房、趣味 親子樓中樓4人房、雀屏 文青4人房（官網該頁沒有雀屏，名稱由 Ken 提供）。照片說明與 alt 文字已更新，照片檔名不動，順序依人數由少到多。已 commit `5a299f9`，2026-10-01 已推上線。這個異動跟版面裝潢分開 commit。
 
@@ -102,14 +103,14 @@
    - 草稿已寫好（2026-10-03）：`C:\myself\ar2two-blog\src\content\blog\gaoxiong-whole-house-homestay-10-people.md`，`draft: true`。事實只用民宿資料卡 `C:\myself\seo-toolkit\tools\profiles\ar2two-profile.md` 和本檔已確認的內容。`C:\myself\seo-toolkit\tools\writing_check.py` 錯誤 0 個，提醒 7 個：6 個是 Ken 已確認的 ⚠ 事實，1 個是說明文字裡「10人」沒空格（為了跟關鍵字寫法一致）。
    - 新增照片，都放在 `C:\myself\ar2two-blog\src\assets\photos\`：兩張大廳照，加上從「大廳外向內」裁出的封面 `baodong-cover-1x1.jpg`、`baodong-cover-4x3.jpg`、`baodong-cover-16x9.jpg`。
    - 2026-10-03 Ken 看過草稿說 OK，已改 `draft: false`，發文前檢查清單跑過、建置成功（共 4 頁）。房型名稱照官網寫法不加空格（例如「吊椅2人房」），跟寵物友善文章一致。
-   - 下一步：等 Ken 同意配對清單登記（`[允許改檔]`）和 commit／推上線（`[allow-pii]`）。commit 不打包 `C:\myself\ar2two-blog\CLAUDE.md` 和 `C:\myself\ar2two-blog\public\images\`。
+   - 2026-10-03 已 commit `d470f8f` 並推上線，https://blog.ar2two.com/blog/gaoxiong-whole-house-homestay-10-people/ 確認可以打開，首頁也列出這篇。配對清單已登記 `docs/*-outline.md`。
+   - 包棟文章完成。2026-10-03 Ken 已在 Google Search Console 對這篇、首頁、關於我們頁都完成要求建立索引。Sitemap（`sitemap-index.xml`）2026-09-11 已提交、狀態成功，不用重交。之後可做：官網包棟頁「包棟前一天才擺長桌」、步行時間的寫法要更新（另一個專案）。
    - MD 同步檢查：大綱檔還沒登記分類，等 Ken 用 `[允許改檔]` 同意在配對清單的「不是說明書」名單加 `docs/*-outline.md`。
 3. Ken 2026-10-03 的指示：照 Claude 的建議直接執行，不用逐項詢問，除非 Ken 喊停。commit 和推上線一樣要 Ken 的訊息帶 `[allow-pii]`，合併成一次問。回覆一律用繁體中文。
 4. 其他還沒處理的事：
    - 民宿資料卡標 ⚠ 的兩項，Ken 已確認：步行到美麗島站、六合夜市都是 4 分鐘；老江紅茶 63 年。資料卡屬於 SEO 工具包專案，要在那邊更新。
    - 官網 https://ar2two.com 的網站名稱設定、早餐「58 年」舊資料（另一個專案）要不要調整。
    - 經營者部落格之後另開，網址與名稱屆時再討論。
-   - Ken 可到 Google Search Console 對首頁、文章頁、關於我們頁按「要求建立索引」（要 Ken 本人登入）。
    - 2026-10-02 MD 同步檢查擋過 `C:\myself\AI-agent_Ken\docs\diagrams\docs03-housekeeping-overview.html` 沒有同步，那是 ai-agent-ken session 的工作，不在本專案處理。
 
 ## 待處理／注意事項
