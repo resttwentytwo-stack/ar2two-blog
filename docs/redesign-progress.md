@@ -109,7 +109,7 @@
    - MD 同步檢查：大綱檔還沒登記分類，等 Ken 用 `[允許改檔]` 同意在配對清單的「不是說明書」名單加 `docs/*-outline.md`。
 3. Ken 2026-10-03 的指示：照 Claude 的建議直接執行，不用逐項詢問，除非 Ken 喊停。commit 和推上線一樣要 Ken 的訊息帶 `[allow-pii]`，合併成一次問。回覆一律用繁體中文。
 4. 其他還沒處理的事：
-   - 民宿資料卡標 ⚠ 的兩項，Ken 已確認：步行到美麗島站、六合夜市都是 4 分鐘；老江紅茶 63 年。資料卡屬於 SEO 工具包專案，要在那邊更新。
+   - 民宿資料卡 `C:\myself\seo-toolkit\tools\profiles\ar2two-profile.md` 已在 2026-10-03 更新（Ken 同意在本對話改）：步行 4 分鐘、中小型犬、老店 63 年、包棟方案與規定、訂房平台寵物費等 13 項，拿掉對應的 ⚠ 與檢查規則。早餐送達時間也已確認（最早 07:30、最晚 10:00，依當天客人的時間統籌出一個時間一次送到）。同房多隻寵物費用（2 隻 300、3 隻 500、4 隻 1000）也已確認。訂金範例也已確認（房價以房型頁為準，吊椅 2 人房平日 1880；訂金直接寫房費的 50%，不舉金額）。資料卡已沒有 ⚠ 項目。SEO 工具包的 commit 要另外問 Ken；那邊另有 `C:\myself\seo-toolkit\tools\ai_visibility.py`、`C:\myself\seo-toolkit\tools\kd_dr.py` 不是本任務改的，不要打包。
    - 官網 https://ar2two.com 的網站名稱設定、早餐「58 年」舊資料（另一個專案）要不要調整。
    - 經營者部落格之後另開，網址與名稱屆時再討論。
    - 2026-10-02 MD 同步檢查擋過 `C:\myself\AI-agent_Ken\docs\diagrams\docs03-housekeeping-overview.html` 沒有同步，那是 ai-agent-ken session 的工作，不在本專案處理。
