@@ -7,7 +7,7 @@
 ## 📌 目前狀態摘要
 
 - 整體進度燈號：✅ 完成（2026-10-06）
-- **下次從這裡接**：本任務沒有待辦了。唯一留著的事：SEO 工具包 `C:\myself\seo-toolkit\` 沒有 GitHub 位置，`1522a3a`、`4bbcdd5` 只存在本機（見步驟 10），要不要開 GitHub 位置之後再問 Ken。
+- **下次從這裡接**：本任務沒有待辦了。
 - 關鍵決定／目前採用方式：
   - 架構：一個**全域通用** skill ＋ 每個部落格專案一份**網站設定檔**（Ken 2026-10-04 同意）。
   - skill 正式版在全域 `C:\Users\w1lin\.claude\skills\blog-article\`，備份在 `C:\myself\claude-global-config\skills\blog-article\`；部落格專案只留網站設定檔。
@@ -151,4 +151,6 @@
 - 部落格 `C:\myself\ar2two-blog\`：`55ae4c8` 只放本檔，已推上 GitHub（main）。`CLAUDE.md`、`docs/redesign-progress.md`、`public/images/` 不是這個任務改的，沒放。
 - claude-global-config：`4f129a9`（步驟 8）、`4e1f16e`（步驟 9）已推上 GitHub（master）。
 - 更正：之前寫「SEO 工具包要推 `1522a3a`、`4bbcdd5`」是錯的。`C:\myself\seo-toolkit\` 沒有設定任何 GitHub 位置，這兩個 commit 只存在本機。
-- 本檔這次的更新（步驟 10、狀態改成完成）另外 commit 一次（Ken `[allow-pii]` 同意）。
+- 本檔這次的更新（步驟 10、狀態改成完成）另外 commit 一次（`a4cf415`，已推上 GitHub）。
+- SEO 工具包上 GitHub（Ken 同意）：新開**私人**位置 https://github.com/resttwentytwo-stack/seo-toolkit ，7 個 commit（`1135910`～`4bbcdd5`）都已推上去（master）。還沒 commit 的 5 項（`tools\ai_visibility.py`、`tools\kd_dr.py`、`tools\profiles\ar2two-profile.md`、`tools\targets\ar2two.csv`、`tools\usage\`）不是這個任務改的，沒放。
+- 推上去前，檢查檔案裡有沒有電話、email 這類個人資料，被安全檢查擋住，沒查完；因為是私人位置，Ken 同意先推。
