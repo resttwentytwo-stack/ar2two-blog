@@ -15,6 +15,7 @@
 | 建置 | `npx astro build`，產出在 `C:\myself\ar2two-blog\dist\` |
 | `kd_dr` 用的網域 | `blog.ar2two.com` |
 | `ai_visibility` 用的網站代號 | `ar2two`（部落格是官網的子網域，引用部落格也算「有引用」） |
+| 給 AI 看的網站導覽 | https://blog.ar2two.com/llms.txt （目錄）、https://blog.ar2two.com/llms-full.txt （全文），由 `C:\myself\ar2two-blog\src\pages\llms.txt.ts`、`C:\myself\ar2two-blog\src\pages\llms-full.txt.ts` 在建置時自動產生，新文章上線不用手動更新（2026-10-07 加入） |
 
 ## 事實來源
 
@@ -46,9 +47,10 @@
 | 文章資料夾 | `C:\myself\ar2two-blog\src\content\blog\`，一篇一個 `.md`，檔名用英文網址代號（例如 `gaoxiong-meilidao-station-stay.md`） |
 | 欄位 | `title`、`description`、`pubDate`、`updatedDate`（選填）、`keywords`（陣列）、`draft`、`cover`（`square`／`standard`／`wide`／`alt`），規定在 `C:\myself\ar2two-blog\src\content.config.ts` |
 | 草稿 | 新文章先設 `draft: true`；草稿在本機預覽也看不到，要預覽時暫時改 `false` |
-| 封面 | 三種比例放在 `C:\myself\ar2two-blog\src\assets\photos\`，檔名「主題-cover-1x1.jpg」「-4x3」「-16x9」 |
+| 封面 | 三種比例放在 `C:\myself\ar2two-blog\src\assets\photos\`。新封面檔名照「照片檔名」規則，比例接在最後，例如 `大廳-包棟長桌-阿爾兔兔-1x1.jpg`、`-4x3.jpg`、`-16x9.jpg`（Ken 2026-10-07 確認；之前的 `主題-cover-1x1.jpg` 英文檔名已上線，不改名） |
 | 內文照片 | `C:\myself\ar2two-blog\src\assets\` 底下依類別分資料夾（`photos`、`rooms`、`route`） |
-| 示意圖 | `C:\myself\ar2two-blog\src\assets\diagrams\`，畫圖程式放 `C:\myself\ar2two-blog\scripts\` |
+| 照片檔名 | 新照片用中文：`場景或房型-照片內容-阿爾兔兔.jpg`，例如 `吊椅2人房-正面-阿爾兔兔.jpg`；半形「-」、半形數字，不堆關鍵字；已上線的照片不改名。完整規則見 `C:\myself\Github_tools_check\.claude\skills\minsu-seo-writing\references\images.md` 第三節（Ken 2026-10-07 確認部落格照這個規則） |
+| 示意圖 | `C:\myself\ar2two-blog\src\assets\diagrams\`，畫圖程式放 `C:\myself\ar2two-blog\scripts\`。新示意圖檔名也用中文，例如 `美麗島站到各場館-捷運示意圖-阿爾兔兔.svg`（Ken 2026-10-07 確認；之前的 `area-map.svg` 等已上線，不改名） |
 | 大綱 | `C:\myself\ar2two-blog\docs\主題-article-outline.md` |
 | 結尾連結 | 「查看空房與訂房資訊」→ https://ar2two.com ；包棟主題另加「查看包棟方案」→ https://ar2two.com/building-price/ |
 | 常用站內連結 | 房型介紹 https://ar2two.com/ar2two-room-introduction/ 、寵物規範 https://ar2two.com/pet-rule/ 、停車資訊 https://ar2two.com/ar2two-parking/ 、早餐 https://ar2two.com/ar2twobreakfast/ |
