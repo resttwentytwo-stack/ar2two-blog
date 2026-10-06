@@ -6,19 +6,15 @@
 
 ## 📌 目前狀態摘要
 
-- 整體進度燈號：🟢 順利推進（skill 已補完、補跑已跑完，剩部落格 commit、推上 GitHub）
-- **下次從這裡接（2026-10-05 22:45 Ken 休息時記下）**：
-  1. ~~補跑~~：2026-10-06 03:05 跑完，結果已補進步驟 7。
-  2. ~~回報補跑結果、改 skill 時間~~：2026-10-06 已回報；Ken `[允許改檔]` 同意改成「約 2～6 小時」，見步驟 9。
-  3. commit 部落格專案：只放本檔（`CLAUDE.md`、`docs/redesign-progress.md`、`public/images/` 不是這個任務改的，不放）。要 Ken 新訊息帶 `[allow-pii]`。
-  4. 推上 GitHub：列出清單給 Ken 確認後再推。SEO 工具包 `1522a3a`、`4bbcdd5`，claude-global-config `4f129a9` 加上步驟 9 的新 commit（還沒做），加上第 3 點的部落格 commit。
+- 整體進度燈號：✅ 完成（2026-10-06）
+- **下次從這裡接**：本任務沒有待辦了。唯一留著的事：SEO 工具包 `C:\myself\seo-toolkit\` 沒有 GitHub 位置，`1522a3a`、`4bbcdd5` 只存在本機（見步驟 10），要不要開 GitHub 位置之後再問 Ken。
 - 關鍵決定／目前採用方式：
   - 架構：一個**全域通用** skill ＋ 每個部落格專案一份**網站設定檔**（Ken 2026-10-04 同意）。
   - skill 正式版在全域 `C:\Users\w1lin\.claude\skills\blog-article\`，備份在 `C:\myself\claude-global-config\skills\blog-article\`；部落格專案只留網站設定檔。
 - 剩餘待辦：
   1. ~~skill 第 10 步、附錄 2 補 `ai_visibility` 內容~~：2026-10-05 已完成（Ken `[允許改檔]`），HTML 重新轉出、記成基準、check 0 項，已複製到 claude-global-config。
   2. ~~2026-10-05 補跑~~：已跑完，結果在步驟 7。
-  3. commit：SEO 工具包、claude-global-config 已完成（見步驟 8 最後）；部落格專案還沒做。
+  3. ~~commit、推上 GitHub~~：2026-10-06 完成，見步驟 10。
 
 ---
 
@@ -148,4 +144,11 @@
 
 - 修改 `C:\Users\w1lin\.claude\skills\blog-article\SKILL.md` 第 193 行：「約 2 小時」改成「約 2～6 小時，看 Gemini 忙不忙」，並註明 10-04 約 2 小時、10-05 約 5.5 小時。
 - HTML 重新轉出、記成基準，`check.py` 合計 0 項。
-- 已複製到 `C:\myself\claude-global-config\skills\blog-article\`（還沒 commit），另備份在 `C:\tmp\blog-article-skill\`。
+- 已複製到 `C:\myself\claude-global-config\skills\blog-article\`，另備份在 `C:\tmp\blog-article-skill\`。
+
+**步驟 10：commit 與推上 GitHub（2026-10-06，Ken 確認清單後同意推）**
+
+- 部落格 `C:\myself\ar2two-blog\`：`55ae4c8` 只放本檔，已推上 GitHub（main）。`CLAUDE.md`、`docs/redesign-progress.md`、`public/images/` 不是這個任務改的，沒放。
+- claude-global-config：`4f129a9`（步驟 8）、`4e1f16e`（步驟 9）已推上 GitHub（master）。
+- 更正：之前寫「SEO 工具包要推 `1522a3a`、`4bbcdd5`」是錯的。`C:\myself\seo-toolkit\` 沒有設定任何 GitHub 位置，這兩個 commit 只存在本機。
+- 本檔這次的更新（步驟 10、狀態改成完成）另外 commit 一次（Ken `[allow-pii]` 同意）。
