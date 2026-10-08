@@ -1,14 +1,30 @@
 ---
 import '../styles/global.css';
+import { getImage } from 'astro:assets';
 import Header from '../components/Header.astro';
+// 沒有封面的頁面（首頁、關於我們），分享預覽圖用寵物友善文章的封面
+import defaultShareImage from '../assets/photos/pet-friendly-cover-16x9.jpg';
 
 interface Props {
   title: string;
   description: string;
   keywords?: string[];
+  // 分享到 LINE、Facebook 時的預覽圖，文章頁傳 16:9 封面進來
+  shareImage?: ImageMetadata;
+  shareImageAlt?: string;
+  ogType?: 'website' | 'article';
 }
 
-const { title, description, keywords = [] } = Astro.props;
+const {
+  title,
+  description,
+  keywords = [],
+  shareImage = defaultShareImage,
+  shareImageAlt = '白色馬爾濟斯開心待在高雄寵物友善民宿阿爾兔兔的門口',
+  ogType = 'website',
+} = Astro.props;
+const ogImage = await getImage({ src: shareImage, width: Math.min(shareImage.width, 1200), format: 'jpg' });
+const ogImageURL = new URL(ogImage.src, Astro.site).toString();
 const siteName = '阿爾兔兔民宿部落格';
 const pageTitle = `${title}｜${siteName}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -41,12 +57,17 @@ const officialSiteURL = 'https://ar2two.com';
     {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
 
     <!-- Open Graph（社群分享預覽用） -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:locale" content="zh_TW" />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content={String(ogImage.attributes.width)} />
+    <meta property="og:image:height" content={String(ogImage.attributes.height)} />
+    <meta property="og:image:alt" content={shareImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <Header />

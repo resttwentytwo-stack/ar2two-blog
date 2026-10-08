@@ -63,6 +63,9 @@ const structuredData = {
   title={post.data.title}
   description={post.data.description}
   keywords={post.data.keywords}
+  shareImage={cover?.wide}
+  shareImageAlt={cover?.alt}
+  ogType="article"
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <article>
