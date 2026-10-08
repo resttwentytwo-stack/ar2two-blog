@@ -17,7 +17,8 @@
   | 第 8 步給 Ken 看本機預覽 | ✅ Ken 2026-10-08 看完預覽說 OK；`draft` 改 `false`、`pubDate` 改 2026-10-08（Ken 確認） | 文章檔第 4、6 行 |
   | 待 Ken 回答 1：網址代號 | ✅ Ken 2026-10-08 確認用 `kaohsiung-concert-stay`（全小寫），文章檔已改名 | 文章檔名 |
   | 待 Ken 回答 2：「高雄車站新站體」 | ✅ Ken 2026-10-08 決定保留原寫法 | 文章「隔天可以去哪」段 |
-  | 第 9 步 commit／上線 | 進行中：2026-10-08 美麗島、包棟兩篇舊文各加一句回連（Ken 確認句子）；commit 檔案清單 Ken 確認（專案規則手冊、`docs\redesign-progress.md`、`public\images\` 不加入）；下一步推上 GitHub，之後第 10 步要求建立索引、AI 能見度 | 寫文章 skill 步驟 9、10 |
+  | 第 9 步 commit／上線 | ✅ 2026-10-08 commit `4674abf` 已推上 GitHub，正式網址 https://blog.ar2two.com/blog/kaohsiung-concert-stay/ 打得開；美麗島、包棟兩篇舊文的回連、sitemap 都確認有出現。**下一步：第 10 步要求建立索引、AI 能見度** | 寫文章 skill 步驟 10 |
+  | 第 10 步上線後 | 進行中：① Search Console 要求建立索引 ✅ Ken 2026-10-08 完成（約 2026-10-15 再查有沒有收錄）；② `rank_tracker` 已加「高雄演唱會住宿」✅（只加名單沒查，等收錄後再查）；③ `ai_visibility` 追加第 11 題演唱會題目 ✅ Ken 確認（`C:\myself\seo-toolkit\tools\targets\ar2two-ai-questions.csv`，SEO 工具包還沒 commit）；④ 已上線 4 篇，下一篇到 5 篇要提醒做相關文章區塊 | 寫文章 skill 步驟 10 |
   | 部落格資料夾還沒 commit 的檔案 | 專案規則手冊、`docs\redesign-progress.md`、`public\images\`（開工前就有，不是這次改的） | `git status` |
   | `gsc_volume` 憑證過期 | 要 Ken 重新登入，另外排時間 | 異常表 |
   | `C:\myself\Github_tools_check\` 要不要開 GitHub 位置 | 還沒問 Ken | — |
