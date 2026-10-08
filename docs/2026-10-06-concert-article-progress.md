@@ -20,9 +20,9 @@
   | 第 9 步 commit／上線 | ✅ 2026-10-08 commit `4674abf` 已推上 GitHub，正式網址 https://blog.ar2two.com/blog/kaohsiung-concert-stay/ 打得開；美麗島、包棟兩篇舊文的回連、sitemap 都確認有出現。**下一步：第 10 步要求建立索引、AI 能見度** | 寫文章 skill 步驟 10 |
   | 第 10 步上線後 | 進行中：① Search Console 要求建立索引 ✅ Ken 2026-10-08 完成（約 2026-10-15 再查有沒有收錄）；② `rank_tracker` 已加「高雄演唱會住宿」✅（只加名單沒查，等收錄後再查）；③ `ai_visibility` 追加第 11 題演唱會題目 ✅ Ken 確認（`C:\myself\seo-toolkit\tools\targets\ar2two-ai-questions.csv`，SEO 工具包還沒 commit）；④ 已上線 4 篇，下一篇到 5 篇要提醒做相關文章區塊 | 寫文章 skill 步驟 10 |
   | 部落格資料夾還沒 commit 的檔案 | 專案規則手冊、`docs\redesign-progress.md`、`public\images\`（開工前就有，不是這次改的） | `git status` |
-  | `gsc_volume` 憑證過期 | 要 Ken 重新登入，另外排時間 | 異常表 |
-  | `C:\myself\Github_tools_check\` 要不要開 GitHub 位置 | 還沒問 Ken | — |
-  | `C:\myself\social-trend-scraper` 沒登記在專案名冊（MD 同步檢查 K13） | 已告訴 Ken，建議由建立它的 session 登記；Ken 還沒回 | 2026-10-07 對話 |
+  | `gsc_volume` 憑證過期 | ✅ Ken 2026-10-08 重新登入，`gsc_volume` 實跑成功；可能每 7 天又過期（推測是 Google 測試中應用程式的限制，還沒查證） | 對話 2026-10-08 |
+  | `C:\myself\Github_tools_check\` 要不要開 GitHub 位置 | ✅ 已經有了：另一個 session 已建私人位置 `resttwentytwo-stack/Github_tools_check` 並推上去（`1b63e9a`），2026-10-08 查過本機跟 GitHub 一致 | `git status` |
+  | `C:\myself\social-trend-scraper` 沒登記在專案名冊（MD 同步檢查 K13） | 已告訴 Ken，✅ Ken 2026-10-08 說要登記；查過專案名冊已經有了（其他 session 登記的），不用再改 | 專案名冊第 20 行 |
 
 - （以下是 2026-10-07 凌晨的舊狀態表，保留對照）：
 
@@ -45,7 +45,7 @@
 - 第 5 步準備圖片：捷運示意圖 ✅ Ken 確認（直式，給手機看）：`C:\myself\ar2two-blog\src\assets\diagrams\美麗島站到各場館-捷運示意圖-阿爾兔兔.svg`，畫圖程式 `C:\myself\ar2two-blog\scripts\draw_concert_mrt_map.py`，備份與手機預覽在 `C:\tmp\ar2two-blog-concert\`。
 - 封面 ✅ Ken 確認：Ken 提供 `C:\myself\ar阿爾兔兔\大廳_NEW\DSC_6624.jpg`（夜晚大門），窗內人臉模糊成霧面玻璃樣（Ken 指定），黑板電話 Ken 說不用模糊；裁成 `C:\myself\ar2two-blog\src\assets\photos\民宿大門-夜晚亮燈-阿爾兔兔-1x1.jpg`／`-4x3.jpg`／`-16x9.jpg`（1280 寬）。**第 5 步完成。**
 - 第 6～8 步（2026-10-07）：初稿 `C:\myself\ar2two-blog\src\content\blog\gaoxiong-concert-stay.md`（中文 2,196 字，正文站內連結 6 個＋結尾 2 個）。`writing_check` 錯誤 0、提醒 2（標題含網站名稱後寬度 64、結尾是「阿爾兔兔民宿部落格」，版面自動加的，跟其他文章一樣）；`astro build` 成功；`site_audit` 錯誤 0（警告都是全站既有：全站沒 og:image、首頁孤兒頁誤報、美麗島文章一張圖 275KB）。手機版表格被切掉，改成清單。**`draft` 暫時改成 `false` 給 Ken 本機預覽 http://localhost:4321/blog/gaoxiong-concert-stay/ ，還沒 commit。** 待 Ken 確認：網址代號 `gaoxiong-concert-stay`（大綱原本暫定 `kaohsiung-…`，改成跟其他文章一樣的 `gaoxiong-`）；「高雄車站新站體」沒有找官方出處。
-- 待處理：民宿資料卡 `C:\myself\seo-toolkit\tools\profiles\ar2two-profile.md` 第 95 列「22:00 後入住拿不到早餐」跟 Ken 2026-10-07 說的不符（早餐跟入住時間無關，只看入住當天 22:00 前有沒有在選單訂好）；深夜入住流程也可補「打電話、比對官方帳號裡的證件、傳密碼」。要動 SEO 工具包，另外問 Ken。
+- ✅ 2026-10-08 已處理（Ken 確認，第 95、102 列都改了，SEO 工具包還沒 commit）：民宿資料卡 `C:\myself\seo-toolkit\tools\profiles\ar2two-profile.md` 第 95 列「22:00 後入住拿不到早餐」跟 Ken 2026-10-07 說的不符（早餐跟入住時間無關，只看入住當天 22:00 前有沒有在選單訂好）；深夜入住流程也可補「打電話、比對官方帳號裡的證件、傳密碼」。要動 SEO 工具包，另外問 Ken。
 - 高流轉乘查證過程：路線圖 PDF 是純圖片、電腦沒有 PDF 工具，Ken 放行 `[allow-pii]` 兩次都沒讀到；裝了 `pypdf`（`pip install --user`，還留著，Ken 要移除再說）；最後改下載官網路網圖 JPG 直接看。
 - 發現：高雄捷運網站用 `fetch_page` 會出現 SSL 憑證錯誤，curl 可以；WebFetch 摘要數字會出錯（寫進寫文章 skill 附錄 2 的候選，要 `[允許改檔]`）。
 - 發現 `fetch_page --json` 壞掉（`ModuleNotFoundError: render_page`），`-o` 存檔正常。SEO 工具包只用不改，記下來之後處理。
