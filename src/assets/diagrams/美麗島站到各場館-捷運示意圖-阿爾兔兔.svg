@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 900" width="420" height="900" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC',sans-serif">
+<rect width="420" height="900" fill="#fdfaf6"/>
+<text x="210.0" y="40" font-size="22" fill="#2b2420" font-weight="700" text-anchor="middle" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">從美麗島站搭捷運</text>
+<text x="210.0" y="70" font-size="22" fill="#2b2420" font-weight="700" text-anchor="middle" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">到高雄各演唱會場館</text>
+<line x1="150" y1="520" x2="150" y2="130" stroke="#d71f3b" stroke-width="10" stroke-linecap="round"/>
+<line x1="40" y1="520" x2="380" y2="520" stroke="#f39800" stroke-width="10" stroke-linecap="round"/>
+<line x1="40" y1="520" x2="40" y2="700" stroke="#6fae3a" stroke-width="10" stroke-linecap="round"/>
+<rect x="166" y="104" width="240" height="56" rx="10" fill="#fdecef" stroke="#d71f3b" stroke-width="1.5"/>
+<circle cx="150" cy="130" r="10" fill="#fff" stroke="#d71f3b" stroke-width="5"/>
+<text x="174" y="128" font-size="18" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">世運站 → 世運主場館</text>
+<text x="174" y="150" font-size="15" fill="#7a6f66" font-weight="400" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">7 站・約 15 分・1 號出口</text>
+<circle cx="150" cy="220" r="10" fill="#fff" stroke="#d71f3b" stroke-width="5"/>
+<text x="174" y="218" font-size="18" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">左營站（高鐵左營站）</text>
+<text x="174" y="240" font-size="15" fill="#7a6f66" font-weight="400" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">6 站・約 13 分</text>
+<circle cx="150" cy="310" r="10" fill="#fff" stroke="#d71f3b" stroke-width="5"/>
+<text x="174" y="308" font-size="18" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">巨蛋站 → 高雄巨蛋</text>
+<text x="174" y="330" font-size="15" fill="#7a6f66" font-weight="400" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">4 站・約 8 分・5 號出口</text>
+<circle cx="150" cy="400" r="10" fill="#fff" stroke="#d71f3b" stroke-width="5"/>
+<text x="174" y="398" font-size="18" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">高雄車站</text>
+<text x="174" y="420" font-size="15" fill="#7a6f66" font-weight="400" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">1 站・約 2 分</text>
+<circle cx="380" cy="520" r="10" fill="#fff" stroke="#f39800" stroke-width="5"/>
+<text x="392" y="478" font-size="18" fill="#2b2420" font-weight="700" text-anchor="end" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">衛武營站 → 衛武營</text>
+<text x="392" y="500" font-size="15" fill="#7a6f66" font-weight="400" text-anchor="end" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">5 站・約 9 分・6 號出口</text>
+<circle cx="40" cy="520" r="10" fill="#fff" stroke="#f39800" stroke-width="5"/>
+<circle cx="40" cy="520" r="5" fill="#6fae3a"/>
+<text x="28" y="478" font-size="18" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">哈瑪星站</text>
+<text x="28" y="500" font-size="15" fill="#7a6f66" font-weight="400" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">3 站・約 6 分</text>
+<text x="60" y="650" font-size="15" fill="#6fae3a" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">轉輕軌，</text>
+<text x="60" y="670" font-size="15" fill="#6fae3a" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">再 3 站</text>
+<circle cx="40" cy="700" r="10" fill="#fff" stroke="#6fae3a" stroke-width="5"/>
+<text x="64" y="698" font-size="18" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">真愛碼頭站（輕軌）</text>
+<text x="64" y="720" font-size="15" fill="#7a6f66" font-weight="400" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">→ 高雄流行音樂中心</text>
+<circle cx="150" cy="520" r="18" fill="#fff" stroke="#2b2420" stroke-width="5"/>
+<circle cx="150" cy="520" r="7" fill="#b5651d"/>
+<text x="176" y="564" font-size="18" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">美麗島站</text>
+<text x="176" y="586" font-size="15" fill="#7a6f66" font-weight="400" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">紅線、橘線交會站</text>
+<text x="176" y="614" font-size="16" fill="#b5651d" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">阿爾兔兔：2 號出口</text>
+<text x="176" y="636" font-size="16" fill="#b5651d" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">走路 4 分鐘</text>
+<line x1="40" y1="770" x2="76" y2="770" stroke="#d71f3b" stroke-width="8" stroke-linecap="round"/>
+<text x="86" y="776" font-size="15" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">紅線</text>
+<line x1="160" y1="770" x2="196" y2="770" stroke="#f39800" stroke-width="8" stroke-linecap="round"/>
+<text x="206" y="776" font-size="15" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">橘線</text>
+<line x1="280" y1="770" x2="316" y2="770" stroke="#6fae3a" stroke-width="8" stroke-linecap="round"/>
+<text x="326" y="776" font-size="15" fill="#2b2420" font-weight="700" text-anchor="start" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">輕軌</text>
+<text x="210.0" y="812" font-size="13.5" fill="#7a6f66" font-weight="400" text-anchor="middle" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">示意圖，非實際比例。</text>
+<text x="210.0" y="832" font-size="13.5" fill="#7a6f66" font-weight="400" text-anchor="middle" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">時間是列車行駛時間，不含等車、轉乘、走路。</text>
+<text x="210.0" y="852" font-size="13.5" fill="#7a6f66" font-weight="400" text-anchor="middle" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">資料來源：高雄捷運官網、各場館官網</text>
+<text x="210.0" y="872" font-size="13.5" fill="#7a6f66" font-weight="400" text-anchor="middle" stroke="#fdfaf6" stroke-width="4" paint-order="stroke">（2026 年 10 月查證）</text>
+</svg>

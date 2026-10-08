@@ -6,26 +6,50 @@
 
 ## 📌 目前狀態摘要
 
-- 整體進度燈號：🟢 順利推進
-- **下次從這裡接（2026-10-06 晚上整理）**：
-
-  **Ken 的提醒**：演唱會文章要把這次新增進來的所有工作（新工具 `competitor_outline`、兩個 skill 補的流程：前 10 名重疊比對、其他人也問了、公開事實查證、會過時資訊不寫、站內連結、AI 能見度追加題目、逐段比對）全部套進來，**從頭重新判斷一次**大綱，不要直接沿用現在的大綱草稿。
+- 整體進度燈號：🟡 部分完成待續（2026-10-08 凌晨 Ken 休息暫停；演唱會文章初稿寫完、自動檢查通過，等 Ken 看預覽）
+- **下次從這裡接（2026-10-08 凌晨整理，每項都核對過檔案）**：
 
   | 項目 | 狀態 | 根據 |
   |---|---|---|
-  | 兩個 skill 第 1～13 題修改 | 已完成、已 commit（`C:\myself\Github_tools_check\` `d3c9c48`、`C:\myself\claude-global-config\` `ca1d8b0`），還沒推上 GitHub | 本檔步驟 2、git log |
-  | 主要關鍵字「高雄演唱會住宿」 | Ken 已確認 | 對話 2026-10-06 |
-  | 大綱草稿（10 段，含 A～E 補充） | 已寫，**Ken 還沒確認段落方向**；依上面提醒要重新判斷 | `C:\myself\ar2two-blog\docs\concert-article-outline.md` |
-  | 「建議不學」飯店清單、兩天一夜行程 | Ken 還沒表態 | 大綱「Claude 建議不學的」 |
-  | 新工具 `competitor_outline` | 已寫好、測試 4 篇成功、已 commit `db7eb55`（`C:\myself\seo-toolkit\`），還沒推上 GitHub | `C:\myself\seo-toolkit\tools\competitor_outline.py` |
-  | 把新工具寫進 skill 第 1、2 項 | 已改（Ken `[允許改檔]`）並 commit：claude-global-config `a1899c2`、Github_tools_check `e370212`，還沒推上 GitHub | 本檔 |
-  | 第 3、4 項（`C:\Users\w1lin\.claude\skills\seo-toolkit\SKILL.md`、`C:\myself\seo-toolkit\docs\manual.md`） | 2026-10-07 已改（Ken `[允許改檔]`），HTML 重新轉出、記成基準。seo-toolkit skill 沒有 git（claude-global-config 也沒有它的備份資料夾），備份在 `C:\tmp\seo-toolkit-skill\`。manual 已 commit `a96ee2d` | 本檔 |
-  | 第 5 項（`C:\myself\Github_tools_check\.claude\skills\zens-ink\SKILL.md` 第 62 列） | 2026-10-07：先把 10/1 未 commit 的修改單獨補 commit `fc4b743`（Ken 同意），再加 `competitor_outline`。**SKILL.html 是手工排版，不能用 md2html 重新轉**（轉了會少 #### 標題、被 K3 擋，已還原手工版、只手動改一行），已 commit `b65c9cd` | 本檔 |
-  | 第 4 步收集事實（公開事實查證、問 Ken 的 7 題） | 還沒開始 | 大綱「待補事實」 |
-  | `gsc_volume` 憑證過期 | 要 Ken 重新登入，另外排時間 | 本檔異常表 |
+  | 大綱（11 段）、第 4 步收集事實、第 5 步圖片 | ✅ 都經 Ken 確認 | `C:\myself\ar2two-blog\docs\concert-article-outline.md` |
+  | 第 6 步初稿 | ✅ 寫完，中文 2,196 字 | `C:\myself\ar2two-blog\src\content\blog\kaohsiung-concert-stay.md` |
+  | 第 7 步自動檢查 | ✅ `writing_check` 錯誤 0；`astro build` 成功；`site_audit` 錯誤 0 | 下方第 6～8 步紀錄 |
+  | 第 8 步給 Ken 看本機預覽 | ✅ Ken 2026-10-08 看完預覽說 OK；`draft` 改 `false`、`pubDate` 改 2026-10-08（Ken 確認） | 文章檔第 4、6 行 |
+  | 待 Ken 回答 1：網址代號 | ✅ Ken 2026-10-08 確認用 `kaohsiung-concert-stay`（全小寫），文章檔已改名 | 文章檔名 |
+  | 待 Ken 回答 2：「高雄車站新站體」 | ✅ Ken 2026-10-08 決定保留原寫法 | 文章「隔天可以去哪」段 |
+  | 第 9 步 commit／上線 | 進行中：2026-10-08 美麗島、包棟兩篇舊文各加一句回連（Ken 確認句子）；commit 檔案清單 Ken 確認（專案規則手冊、`docs\redesign-progress.md`、`public\images\` 不加入）；下一步推上 GitHub，之後第 10 步要求建立索引、AI 能見度 | 寫文章 skill 步驟 9、10 |
+  | 部落格資料夾還沒 commit 的檔案 | 專案規則手冊、`docs\redesign-progress.md`、`public\images\`（開工前就有，不是這次改的） | `git status` |
+  | `gsc_volume` 憑證過期 | 要 Ken 重新登入，另外排時間 | 異常表 |
+  | `C:\myself\Github_tools_check\` 要不要開 GitHub 位置 | 還沒問 Ken | — |
+  | `C:\myself\social-trend-scraper` 沒登記在專案名冊（MD 同步檢查 K13） | 已告訴 Ken，建議由建立它的 session 登記；Ken 還沒回 | 2026-10-07 對話 |
 
-- **SEO 工具包新增 `competitor_outline`（Ken 2026-10-06 同意，破例改 SEO 工具包）**：`C:\myself\seo-toolkit\tools\competitor_outline.py` 已寫好、測試 4 篇成功；`C:\myself\seo-toolkit\seo.py` 加一行登記。都還沒 commit。`seo.py` 裡另有 github-tools-check-a8 加的 pagespeed 那一行（它說短期不 commit、seo.py 不會再改），commit 時只放自己那一行。SEO 工具包說明書 `docs\manual.md` 和 seo-toolkit skill 由 github-tools-check-a8 先改，這邊要補 competitor_outline 說明前先問它。
-- **~~要補進寫文章 skill~~（2026-10-06 已改，見上表）**：步驟 3 加「用 `competitor_outline` 整理競爭文章，逐段比對、每項標要補或不學並寫理由，抓同規模民宿文章」（Ken 2026-10-06 確認放步驟 3）；附錄 1 加 `competitor_outline`；民宿 SEO 寫作 skill `references\content-brief.md` 第二節加一句指向寫文章 skill 步驟 3。附錄 2：`parse_html` 的小標題在 `h1`、`h2`、`h3` 欄位；`word_count` 照英文空格算，中文文章不能用（2026-10-06 測試，見 `C:\myself\ar2two-blog\docs\concert-article-outline.md` 工具使用紀錄第 11 列）。
+- （以下是 2026-10-07 凌晨的舊狀態表，保留對照）：
+
+  **Ken 的提醒**：演唱會文章要把這次新增的所有工具和流程全部套進來，**從頭重新判斷一次大綱**，不直接沿用現在的大綱草稿。流程照寫文章 skill（全域 blog-article），對照表見 `C:\tmp\ar2two-blog-skill-checklist\寫文章流程總表-2026-10-07.html` 第三節。
+
+  | 項目 | 狀態 | 根據 |
+  |---|---|---|
+  | 兩個 skill 補強（第 1～13 題、a～f、核對補的 6 項、圖片中文命名） | ✅ 已改、已 commit、已推上 GitHub（claude-global-config `ca1d8b0`、`a1899c2`、`8addf5b`） | git log |
+  | 民宿 SEO 寫作 skill、zens-ink skill 的修改 | ✅ 已 commit（`d3c9c48`、`e370212`、`fc4b743`、`b65c9cd`）；**`C:\myself\Github_tools_check\` 沒有 GitHub 位置，只存在本機** | git remote 為空 |
+  | `competitor_outline`、說明書、`llms_gen` 登記 | ✅ 已 commit、已推上 GitHub（seo-toolkit `db7eb55`、`a96ee2d`、`87d1bba`，連同 github-tools-check-a8 的 `3d6baaa`、`781a638`，Ken 同意全部推） | git log |
+  | llms.txt、llms-full.txt | ✅ 已上線（部落格 `6e49f3d`）。正式網站 `ai_crawler_audit` 100/100；首頁、關於、3 篇文章都 200 | `C:\myself\seo-toolkit\reports\2026-10-07-ar2two-blog-ai-crawler-after.json` |
+  | 主要關鍵字「高雄演唱會住宿」 | ✅ Ken 已確認 | 對話 2026-10-06 |
+  | 大綱（照新流程重新判斷，11 段） | ✅ Ken 2026-10-07 確認，問完 8 題後的 6 項調整也確認 | `C:\myself\ar2two-blog\docs\concert-article-outline.md` |
+  | 「建議不學」飯店清單、兩天一夜行程 | ✅ 飯店清單不學；兩天一夜改寫短段「隔天去哪」（駁二、高雄車站新站體） | 大綱逐段比對表 |
+  | 第 4 步收集事實（公開事實查證、問 Ken 的 8 題） | ✅ 2026-10-07 完成；**下一步：第 5 步準備圖片** | 大綱「公開事實查證結果」「Ken 的回答」 |
+  | `gsc_volume` 憑證過期 | 要 Ken 重新登入，另外排時間 | 異常表 |
+  | `C:\myself\Github_tools_check\` 要不要開 GitHub 位置 | 還沒問 Ken | — |
+
+- 2026-10-07 開工（Ken 說 ok）：第 1 項「步驟 2 結果沿用」✅；第 2 項「補 AI 延伸問題」✅，10 題已寫進大綱，第 10 題（演唱會期間會不會漲價）要問 Ken。第 3 項 `competitor_outline` 已跑完、逐段比對表已寫進大綱（12 項），Ken 確認第 2 項以外照建議定案；第 2 項（兩天一夜行程）Ken 選「只寫短短一段隔天可以去哪」，地點：駁二藝術特區、高雄車站新站體。第 4 項客人故事：Ken 中途喊停 Chrome 做法，改用 `fetch_page`；Dcard 全擋、PTT 讀到 4 篇，補了故事 4（開車停車）與線索，已寫進大綱。第 5 項對照交通型範本 ✅：Ken 確認加「開車來的話」一段，主推附近停車格、兩個停車場當備案。第 6 項站內連結 ✅：正文 6 個連結，Ken 確認。舊文回連 Ken 同意（上線時一起改）。第 7 項：重新判斷版大綱（11 段）Ken 確認 ✅。第 8 項＝第 4 步收集事實：公開事實已查（結果在大綱「公開事實查證結果」），高流轉乘路線 ✅（官方路網圖確認 O1／C14 是輕軌轉乘站）；停車場關閉寫法 ✅ Ken 選「寫交通管制以公告為準＋巨蛋官網停車說明」。公開事實全部完成；問 Ken 民宿這邊的 8 題 ✅（回答記在大綱「Ken 的回答」表）；依回答調整大綱 6 項 ✅ Ken 確認並已改進大綱。**第 4 步收集事實完成。**
+- 第 5 步準備圖片：捷運示意圖 ✅ Ken 確認（直式，給手機看）：`C:\myself\ar2two-blog\src\assets\diagrams\美麗島站到各場館-捷運示意圖-阿爾兔兔.svg`，畫圖程式 `C:\myself\ar2two-blog\scripts\draw_concert_mrt_map.py`，備份與手機預覽在 `C:\tmp\ar2two-blog-concert\`。
+- 封面 ✅ Ken 確認：Ken 提供 `C:\myself\ar阿爾兔兔\大廳_NEW\DSC_6624.jpg`（夜晚大門），窗內人臉模糊成霧面玻璃樣（Ken 指定），黑板電話 Ken 說不用模糊；裁成 `C:\myself\ar2two-blog\src\assets\photos\民宿大門-夜晚亮燈-阿爾兔兔-1x1.jpg`／`-4x3.jpg`／`-16x9.jpg`（1280 寬）。**第 5 步完成。**
+- 第 6～8 步（2026-10-07）：初稿 `C:\myself\ar2two-blog\src\content\blog\gaoxiong-concert-stay.md`（中文 2,196 字，正文站內連結 6 個＋結尾 2 個）。`writing_check` 錯誤 0、提醒 2（標題含網站名稱後寬度 64、結尾是「阿爾兔兔民宿部落格」，版面自動加的，跟其他文章一樣）；`astro build` 成功；`site_audit` 錯誤 0（警告都是全站既有：全站沒 og:image、首頁孤兒頁誤報、美麗島文章一張圖 275KB）。手機版表格被切掉，改成清單。**`draft` 暫時改成 `false` 給 Ken 本機預覽 http://localhost:4321/blog/gaoxiong-concert-stay/ ，還沒 commit。** 待 Ken 確認：網址代號 `gaoxiong-concert-stay`（大綱原本暫定 `kaohsiung-…`，改成跟其他文章一樣的 `gaoxiong-`）；「高雄車站新站體」沒有找官方出處。
+- 待處理：民宿資料卡 `C:\myself\seo-toolkit\tools\profiles\ar2two-profile.md` 第 95 列「22:00 後入住拿不到早餐」跟 Ken 2026-10-07 說的不符（早餐跟入住時間無關，只看入住當天 22:00 前有沒有在選單訂好）；深夜入住流程也可補「打電話、比對官方帳號裡的證件、傳密碼」。要動 SEO 工具包，另外問 Ken。
+- 高流轉乘查證過程：路線圖 PDF 是純圖片、電腦沒有 PDF 工具，Ken 放行 `[allow-pii]` 兩次都沒讀到；裝了 `pypdf`（`pip install --user`，還留著，Ken 要移除再說）；最後改下載官網路網圖 JPG 直接看。
+- 發現：高雄捷運網站用 `fetch_page` 會出現 SSL 憑證錯誤，curl 可以；WebFetch 摘要數字會出錯（寫進寫文章 skill 附錄 2 的候選，要 `[允許改檔]`）。
+- 發現 `fetch_page --json` 壞掉（`ModuleNotFoundError: render_page`），`-o` 存檔正常。SEO 工具包只用不改，記下來之後處理。
+- 重新判斷大綱的順序（2026-10-07 列給 Ken 看過）：步驟 2 結果沿用（不用再花點數）→ 補 AI 延伸問題 → `competitor_outline` 正式跑一次、逐段比對 → 客人故事補 dcard／ptt 線索 → 對照交通型 7 段範本 → 站內連結 4 條規則 → 給 Ken 確認大綱 → 第 4 步收集事實。
+- 注意：`C:\myself\Github_tools_check\.claude\skills\zens-ink\SKILL.html` 是手工排版，不能用 md2html 重新轉（2026-10-07 踩過，已寫進寫文章 skill 附錄 2）。
 - **以後要做、這次不做（Ken 2026-10-06 交代要記下）**：目標關鍵字清單 `C:\myself\seo-toolkit\tools\targets\ar2two.csv` 加一欄「負責頁面」，每個字填「官網某某頁」或「部落格某篇」，一張表看出每個字由誰負責、避免官網與部落格互搶。要動 SEO 工具包，也要一個字一個字跟 Ken 確認，另外排時間做。
 
 ---
